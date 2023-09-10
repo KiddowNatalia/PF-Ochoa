@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* NAV BAR */
+
+.background{
+    background-color: #CA4A65;
+}
+
+.miBtn{
+    background-color: #F8BF68;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+.miBtn:hover{
+    background-color: #F7B147;
+}
+.logoCinefilos{
+    height: 38px;
+    cursor: pointer;
+}
+.btn{
+    background-color: #fafafa;
+    border: none;
+    border-radius: 5px;
+}
+
+.birrete{
+    width: 35px;
+    border-radius: 5px;
+    background-color: none;
+    cursor: pointer;
+}
+.birrete:hover{
+    width: 40px;
+    background-color: #F7B147;
+}
+.colorText{
+    color: #fafafa;
+}
+.heightPoster{
+    height: 600px;
+    width: 100%;
+    margin: 0;
+}
+.navbar-collapse{
+    flex-grow: inherit;
+}
+
+.widthForm{
+    width: 65rem;
+}
+
+.image2{
+    display: none;
+ }
+ 
+.estudiante{
+    display: none;
+}
+ 
+ @media only screen and (min-width: 0px) and (max-width: 767px){ 
+    .image1{
+      display: none;
+    }
+ 
+    .image2{
+      display: block;
+      width: 38px;
+      cursor: pointer;
+    }
+    .miBtn{
+        background-color: inherit;
+    }
+ }    
+ @media only screen and (max-width: 991px){ 
+    .btn{
+        background-color: inherit;
+        display: block;
+        border: inherit;
+        width: fit-content;
+        border-radius: 2px;
+        padding: 0;
+        margin-left: 0;
+        margin-bottom: 5px;
+        margin-top: 2px;
+    }
+     .miBtn{
+        background-color: inherit;
+        display: block;
+        border: inherit;
+        width: fit-content;
+        border-radius: 2px;
+        padding: 0;
+        margin-left: 0;
+        margin-top: 7px;
+    }
+    .birrete{
+        display: none;
+    }
+    .estudiante{
+        display: block;
+    }
+    .birreteDesplegable{
+        width: 30px;
+    }
+ }    
+
