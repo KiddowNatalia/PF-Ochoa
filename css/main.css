@@ -1,0 +1,124 @@
+body.row {
+  --bs-gutter-x: 0;
+}
+
+.background {
+  background-color: #CA4A65;
+}
+
+button a {
+  text-decoration: none;
+  color: black;
+}
+button.miBtn {
+  background-color: #F8BF68;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  width: auto;
+}
+button.miBtn:hover {
+  background-color: #F7B147;
+  transition: all 0.5s;
+}
+button.btn {
+  background-color: #fafafa;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  width: auto;
+}
+button.btn:hover {
+  transition: all 0.5s;
+}
+@media only screen and (max-width: 991px) {
+  button {
+    width: fit-content;
+  }
+  button.btn {
+    background-color: inherit;
+    border: inherit;
+    border-radius: 2px;
+    padding: 0px;
+    width: auto;
+    top: 2px;
+    right: 0px;
+    bottom: 5px;
+    left: 2px;
+    display: block;
+    width: fit-content;
+  }
+  button.miBtn {
+    background-color: inherit;
+    border: inherit;
+    border-radius: 2px;
+    padding: 0px;
+    width: auto;
+    top: 7px;
+    right: 0px;
+    bottom: 5px;
+    left: 0px;
+    display: block;
+  }
+}
+
+.estudiante {
+  display: none;
+}
+@media only screen and (max-width: 991px) {
+  .estudiante {
+    display: block;
+  }
+  .estudiante img.birreteDesplegable {
+    width: 30px;
+  }
+}
+
+img.image1 {
+  height: 38px;
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+}
+img.image2 {
+  display: none;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  img.image2 {
+    display: block;
+    width: 38px;
+    cursor: pointer;
+  }
+  img.image1 {
+    display: none;
+  }
+}
+img.birrete {
+  background-color: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0px;
+  width: 35px;
+  cursor: pointer;
+}
+img.birrete:hover {
+  transform: scale(1.1);
+  background-color: #F8BF68;
+  transition: all 0.5s;
+}
+@media only screen and (max-width: 991px) {
+  img.birrete.birrete {
+    display: none;
+  }
+}
+
+.navbar-collapse {
+  flex-grow: inherit;
+}
+
+.widthForm {
+  width: 65rem;
+}
+
+/*# sourceMappingURL=main.css.map */
