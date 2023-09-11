@@ -1,0 +1,24 @@
+$paleta:(
+    'colorPrimario': #CA4A65,
+    'colorSecundario': #F8BF68,
+    'colorAcento': #1A4268,  
+    'hoverBotones': #F7B147,
+    'white': #fafafa,
+);
+
+//mixins
+@mixin botones($color,$border,$radius,$padding,$width){
+    background-color: $color;
+    border: $border;
+    border-radius: $radius;
+    padding: $padding;
+    width: $width;
+}
+@mixin imagenes($height,$width,$margin,$padding){
+    height: $height;
+    width: $width;
+    margin: $margin;
+    padding: $padding;
+}
+
+

@@ -1,0 +1,99 @@
+body{
+    &.row{
+        --bs-gutter-x: 0;
+    }
+}
+.background{
+    background-color: map-get($map: $paleta, $key: colorPrimario);
+}
+button {
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    &.miBtn{
+        @include botones(map-get($map:$paleta, $key: colorSecundario),none,5px ,8px,auto);
+        &:hover{
+            background-color: map-get($map: $paleta, $key: 'hoverBotones');
+        }
+    }
+    &.btn{
+        @include botones(map-get($map:$paleta, $key: 'white'),none,5px ,8px, auto);
+        } 
+        @media only screen and (max-width: 991px){ 
+            &.btn{
+             @include botones(inherit,inherit,2px,0px,auto);
+            display: block;
+            width: fit-content;
+            margin-bottom: 5px;
+            margin-top: 2px;
+            margin-left: 2px
+            }
+            &.miBtn{
+            @include botones(inherit,inherit,2px,0px,auto);
+            display: block;
+            width: fit-content;
+            margin-bottom: 5px;
+            margin-top: 7px;
+        }
+    }
+}
+.estudiante{
+        display: none;
+        @media only screen and (max-width: 991px){ 
+        display: block;
+        img{
+            &.birreteDesplegable{
+                width: 30px;
+            }
+        }
+    }
+}
+img{
+    &.image1{
+        @include imagenes(38px,auto,0px ,0px);
+            cursor: pointer;
+        }
+    &.image2{
+        display: none;
+    }
+    @media only screen and (min-width: 0px) and (max-width: 767px){
+        &.image2{
+            display: block;
+            width: 38px;
+            cursor: pointer;
+        }
+        &.image1{
+            display: none;
+        }
+    }
+
+    &.birrete{
+        @include botones(none,none ,5px ,0px,35px);
+        cursor: pointer;
+        &:hover{
+            width: 40px;
+            background-color: map-get($map: $paleta, $key: colorSecundario );
+        }
+        @media only screen and (max-width: 991px){
+            &.birrete{
+                display: none;
+            }
+        } 
+    } 
+}     
+.navbar-collapse{
+    flex-grow: inherit;
+}
+
+.widthForm{
+    width: 65rem;
+}
+
+
+ 
+
+
+    
+   
+
