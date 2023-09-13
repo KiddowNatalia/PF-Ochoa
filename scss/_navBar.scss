@@ -2,6 +2,7 @@ body{
     &.row{
         --bs-gutter-x: 0;
     }
+
 }
 .background{
     background-color: map-get($map: $paleta, $key: colorPrimario);

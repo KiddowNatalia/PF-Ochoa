@@ -1,0 +1,32 @@
+.contenedorDeComentarios{
+    @include flexBox(flex,row,none,none); 
+    @include margenes(40px,40px ,0px ,0px );
+    @include tamaño(500px,90%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0;
+ 
+}
+.fotoUsuario{
+    @include tamaño(100px,100px);
+    padding: 0;
+}
+.comentarios{
+    @include flexBox(flex,row ,center ,none);
+    @include tamaño(auto,100%);
+    padding: 0%;
+}
+.contenedorPadreComentarios{
+    padding: 0;
+    width: 100%;
+    @media (min-width:0px) and (max-width:1200px) {
+            display: none;
+        }
+} 
+ .cajaComentarios{
+    @include flexBox(flex,column ,center ,center);
+    height: fit-content;
+}
+textarea{
+    @include tamaño(20%,50%);
+}
