@@ -1,0 +1,52 @@
+//mixins
+@mixin flexBox($display,$flexDirection,$alignItems,$justifyCoxntent){
+    display: $display;
+    flex-direction: $flexDirection;
+    align-items: $alignItems;
+    justify-content: $justifyCoxntent;
+}
+@mixin botones($color,$border,$radius,$padding,$width){
+    background-color: $color;
+    border: $border;
+    border-radius: $radius;
+    padding: $padding;
+    width: $width;
+}
+@mixin imagenes($height,$width,$margin,$padding){
+    height: $height;
+    width: $width;
+    margin: $margin;
+    padding: $padding;
+}
+@mixin margenes($top,$right,$bottom,$left){
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+@mixin tamaño($height,$width){
+    height: $height;
+    width: $width;
+}
+@mixin margenPadding($margen,$padding){
+    margin: $margen;
+    padding: $padding;
+}
+
+nav{
+    &.subMenu{
+        background-color: map-get($map: $paleta, $key:colorPrimario );
+        @media only screen and (min-width: 991px) and (max-width: 2040px){
+            display: none;
+        }
+    }
+    ul{
+        &.subMenuItems{
+            @include flexBox(flex,row , center ,space-between);
+            width: 100vw;
+            padding-left: 8px;
+            padding-right: 8px;
+            color: black;
+        }
+    }
+}

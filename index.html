@@ -52,47 +52,66 @@
         </div>
       </div>
     </nav>
+    <!-- SUB MENU MOBILE -->
+    <nav class="subMenu">
+      <ul class="navbar-nav subMenuItems">
+        <li class="subMenuItems">
+          <a class="nav-link" href="#seriesYPeliculas">Series</a>
+        </li>
+        <li class="subMenuItems">
+          <a class="nav-link" href="#seriesYPeliculas">Películas</a>
+        </li>
+        <li class="subMenuItems">
+          <a class="nav-link disabled" href="#">Inicio</a>
+        </li>
+        <li class="subMenuItems disabled">
+          <a class="nav-link disabled" href="#">Perfil</a>
+        </li>
+        <li class="subMenuItems">
+          <a class="nav-link disabled" href="#">Amigos</a>
+        </li>
+    </nav>
+     <!-- SUB MENU MOBILE -->
     <!-- FINNAV BAR -->
     <!-- CAROUSEL -->
-    <section class="row w-100 mb-0">
-      <div id="carouselExampleDark" class=" col-6 m-xl-5  col-sm-12 m-sm-0 row col-xl-6  carousel carousel-dark slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
+    <section class="contenedorCarousel row w-100 right">
+      <div id="carouselExampleDark" class=" col-6 m-xl-5 col-sm-12 m-sm-0 row col-xl-6 carousel carousel-dark slide">
+        
+        <div class="carousel-inner aVer">
+          <button class="carousel-control-prev arrowContainer" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <img class="arrow" src="/img/iconos/arrow.png" alt="Boton atras">
+           </button>
+           <button class=" carousel-control-next " type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+             <img class="arrow" src="/img/iconos/arrow-right.png" alt="boton Next">
+           </button>
+          <div class="carousel-item active " data-bs-interval="10000">
             <img src="img/banner-barbie-carousel.jpg" class="d-block w-100 h-30" alt="poster de Barbie">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Nuevo estreno</h5>
-              <p>Sabias que Margot Robbie es hermosisima hasta sin maquillaje? desmenti esta teoría mirando la peli y dejanos tu reseña!</p>
+            <div class=" carouselGradiente carousel-caption d-none d-md-block">
+              <h5 class="descripcionCarousel">Nuevo estreno</h5>
+              <p class="descripcionCarousel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere neque aut ratione exercitationem, optio sed sapiente, sint, eos et amet suscipit doloremque architecto atque dolor at consequuntur inventore saepe ex.</p>
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
             <img src="img/banner-harry-potter-carousel.jpg" class="d-flex w-100 h-50" alt="Harry Potter poster">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
+            <div class="carouselGradiente carousel-caption d-none d-md-block">
+              <h5 class="descripcionCarousel">Second slide label</h5>
+              <p class="descripcionCarousel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius illum optio odio! Alias vel nobis omnis, incidunt doloremque voluptates necessitatibus, a accusamus, reiciendis possimus consequatur consectetur tempora dicta explicabo nam.</p>
             </div>
           </div>
           <div class="carousel-item">
             <img src="img/banner-oppenheimer-carousel.jpg" class="w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
+            <div class="carouselGradiente carousel-caption d-none d-md-block">
+              <h5 class="descripcionCarousel">Third slide label</h5>
+              <p class="descripcionCarousel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores sit minima delectus consequuntur nemo repellat iste qui in tempore voluptatem earum quisquam fugiat sint distinctio saepe alias quaerat, similique harum.</p>
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
       <!-- FIN DEL CAROUSEL -->
       <!-- CAJA DE COMENTARIOS -->
-    <div class="col contenedorPadreComentarios">
+    <div class="col contenedorPadreComentarios ">
       <h2 class="m-5 comentariosH2 ">Comentarios</h2>
-      <div class="row col-6 contenedorDeComentarios ms-0">
+      <div class="row  contenedorDeComentarios">
         <div class="comentarios">
             <img src="img/avatar-usuarios.jpg" alt="fotoUsuario" class="fotoUsuario">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus rem hic nesciunt architecto numquam aperiam cumque asperiores, saepe neque soluta iure illo, accusamus consequuntur id, praesentium beatae aspernatur quod!</p>
@@ -145,7 +164,94 @@
     </div>
   </section>
     <!-- FIN DE CAJA DE COMENTARIOS -->
-
+    <!-- SERIES Y PELICULAS -->
+    
+    <h2 id="seriesYPeliculas" class="desktop m-4 text-center text-xl-center text-sm-center m-sm-4 flex-fill">Series y películas</h2>
+  <section class="contenedorPostersDePeliculas desktop">
+    <button class="postersBack carousel-control-prev " type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <img class="arrow" src="/img/iconos/arrow.png" alt="Boton atras">
+     </button>
+     <button class="postersNext carousel-control-next " type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+       <img class="arrow" src="/img/iconos/arrow-right.png" alt="boton Next">
+     </button>
+      <div class="primerFilaPosters">
+        <div class="posterPelicula position2">
+          <img class="botonFavoritos2" src="/img/banderin.png" alt="Boton agregar">
+          <img class="botonFavoritos2 hover" src="/img/banderin-hover.png" alt="Boton agregar">
+            <img class="posters img-fluid" src="img/poster-barbie.jpg" alt="posterBarbie" >
+            <p class="mt-xl-3 text-wrap descripcionPeli">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cupiditate maxime. Porro beatae accusantium dicta, laudantium repudiandae recusandae enim nostrum libero.</p>
+            <button type="button" class=" verReseñas btn-light text-dark me-2"><a  href="">Leer reseñas</a></button>
+        </div>
+          <div class="posterPelicula position2">
+            <img class="botonFavoritos2" src="/img/banderin.png" alt="Boton agregar">
+            <img class="botonFavoritos2 hover" src="/img/banderin-hover.png" alt="Boton agregar">
+              <img class="posters img-fluid" src="img/poster-interestellar.jpg" alt="posterInterestellar">
+              <p class="mt-xl-3 text-wrap descripcionPeli">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cupiditate maxime. Porro beatae accusantium dicta, laudantium repudiandae recusandae enim nostrum libero.</p>
+              <button type="button" class=" verReseñas btn-light text-dark me-2"><a  href="">Leer reseñas</a></button>
+          </div>
+          <div class="posterPelicula position2 img__wrap">
+            <img class="botonFavoritos2" src="/img/banderin.png" alt="Boton agregar">
+            <img class="botonFavoritos2 hover" src="/img/banderin-hover.png" alt="Boton agregar">
+              <img class="posters img-fluid" src="img/poster-oppenheimer.jpeg" alt="posterOpenhaimer">
+              <p class="mt-xl-3 text-wrap descripcionPeli">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cupiditate maxime. Porro beatae accusantium dicta, laudantium repudiandae recusandae enim nostrum libero.</p>
+              <button type="button" class=" verReseñas btn-light text-dark me-2"><a  href="">Leer reseñas</a></button>
+          </div>
+          <div class="posterPelicula position2">
+            <img class="botonFavoritos2" src="/img/banderin.png" alt="Boton agregar">
+            <img class="botonFavoritos2 hover" src="/img/banderin-hover.png" alt="Boton agregar">
+            <img class="posters img-fluid" src="img/poster-interestellar.jpg" alt="posterInterestellar">
+            <p class="mt-xl-3 text-wrap descripcionPeli">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cupiditate maxime. Porro beatae accusantium dicta, laudantium repudiandae recusandae enim nostrum libero.</p>
+            <button type="button" class=" verReseñas btn-light text-dark me-2"><a  href="">Leer reseñas</a></button>
+        </div>    
+      </div>
+          <!-- ORDEN EN MOBILE -->
+  <section class="contenedorPostersDePeliculas mobile">
+    <div class="tituloFiltro">
+      <h2 id="seriesYPeliculas" class="mobile m-3 me-0 text-center text-xl-center text-sm-center m-sm-4 ">Series y películas</h2>
+      <img class="filtroBusqueda" src="img/iconos/filtro-busqueda.png" alt="Filtro de busqueda">
+    </div>
+      <div class="primerFilaPosters">
+        <div class="posterPelicula position">
+          <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
+            <img class="posters img-fluid" src="img/poster-interestellar.jpg" alt="posterInterestellar">
+            <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
+            <button type="button" class=" verReseñas btn-light text-dark"><a  href="">Leer reseñas</a></button>
+        </div>
+        <div class="posterPelicula position">
+           <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
+            <img class="posters img-fluid" src="img/poster-oppenheimer.jpeg" alt="posterOpenhaimer">
+            <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
+            <button type="button" class=" verReseñas btn-light text-dark"><a  href="">Leer reseñas</a></button>
+        </div>
+    </div>
+    <div class="segundaFilaPosters">
+        <div class="posterPelicula position">
+           <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
+            <img class="posters img-fluid" src="img/poster-harry-potter.jpg" alt="posterHarryPotter">
+            <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
+            <button type="button" class=" verReseñas btn-light text-dark"><a  href="">Leer reseñas</a></button>
+        </div>
+        <div class="posterPelicula position">
+           <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
+            <img class="posters img-fluid" src="img/poster-barbie.jpg" alt="posterBarbie">
+            <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
+            <button type="button" class=" verReseñas btn-light text-dark"><a  href="">Leer reseñas</a></button>
+        </div>
+    </div>
+    <div class="tercerFilaPosters">
+      <div class="posterPelicula position">
+         <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
+          <img class="posters img-fluid" src="img/poster-oppenheimer.jpeg" alt="posterOpenhaimer">
+          <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
+          <button type="button" class=" verReseñas btn-light text-dark"><a  href="">Leer reseñas</a></button>
+      </div>
+      <div class="posterPelicula position">
+         <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
+        <img class="posters img-fluid" src="img/poster-interestellar.jpg" alt="posterInterestellar">
+        <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
+        <button type="button" class=" verReseñas btn-light text-dark"><a  href="">Leer reseñas</a></button>
+    </div>
+      <!-- ORDEN EN MOBILE -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

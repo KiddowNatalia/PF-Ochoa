@@ -1,0 +1,180 @@
+@mixin flexBox($display,$flexDirection,$alignItems,$justifyCoxntent){
+    display: $display;
+    flex-direction: $flexDirection;
+    align-items: $alignItems;
+    justify-content: $justifyCoxntent;
+}
+@mixin botones($color,$border,$radius,$padding,$width){
+    background-color: $color;
+    border: $border;
+    border-radius: $radius;
+    padding: $padding;
+    width: $width;
+}
+@mixin imagenes($height,$width,$margin,$padding){
+    height: $height;
+    width: $width;
+    margin: $margin;
+    padding: $padding;
+}
+@mixin margenes($top,$right,$bottom,$left){
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+@mixin tamaño($height,$width){
+    height: $height;
+    width: $width;
+}
+@mixin margenPadding($margen,$padding){
+    margin: $margen;
+    padding: $padding;
+}
+
+
+section{
+    &.contenedorPostersDePeliculas{
+        @include flexBox(flex,column ,space-between ,space-around );
+        width: 100vw;
+    }
+    div{
+        &.tituloFiltro{
+            @include flexBox(flex,row ,center ,center )
+        }
+        &.position{
+            position: relative;
+        } 
+        &.position2{
+            position: relative;
+        } 
+        &.primerFilaPosters, &.tercerFilaPosters{
+            @include flexBox(flex,row ,none ,center );
+            flex-wrap: wrap;
+            padding-top: 20px;
+        }
+        &.posterPelicula{
+            @include flexBox(flex,column,center,center);
+            width: 25em;
+            text-align: center;
+            @media (min-width:0px) and (max-width:1200px) {
+                &.posterPelicula{
+                    width: 150px;
+                    padding: 20px;
+                    padding-top: 0;
+                }
+            }
+        }
+        &.segundaFilaPosters{
+            @include flexBox(flex,row ,none ,center);
+            flex-wrap: wrap-reverse;
+            padding-top: 20px
+        }        
+        }
+        &.mobile{
+            display: none;
+        }
+        @media (min-width:0px) and (max-width:1200px) {
+            &.posterPelicula{
+                width: 150px;
+                padding: 20px;
+            }
+            &.mobile{
+                display: block;
+            }
+            &.desktop{
+                display: none;
+            }
+        } 
+} 
+img{
+    &.posters{
+        @include tamaño(31.2em,21.7em);
+        @media (min-width:0px) and (max-width:1200px) {
+            &.posters{
+                @include tamaño(160px,130px);
+                &:hover{
+                    display: none;
+                }
+            }
+        }
+    }
+    &.botonFavoritos{
+        @include tamaño(34px,24px);
+        position: absolute;
+        bottom: 250px;
+        right: 106px;
+    }
+    &.botonFavoritos2{
+        @include tamaño(68px,48px);
+        position: absolute;
+        bottom: 600px;
+        right: 327px;
+        cursor: pointer;
+        //ESTE CODIGO VALE ORO
+        &.botonFavoritos2:hover{
+            display: block;
+            opacity: 1;
+            transition: opacity .2s;
+            transform: scale(1.1);
+            transition: all 0.5s;
+          }
+          &.hover {
+            opacity: 0;
+            display: block;
+            transition: opacity .2s;
+          }
+          //ESTE CODIGO VALE ORO
+    }
+    &.hover{
+        &:hover{
+            display: block;
+        }
+    }
+}
+p{
+    &.descripcionPeli{
+        padding-left: 30px;
+        padding-right: 30px;
+        
+        @media (min-width:0px) and (max-width:1200px) {
+            padding: 0;
+            text-align: start;
+        }
+    }
+}
+
+.desktop{
+    @media (min-width:0px) and (max-width:1200px) {
+        display: none;
+    } 
+}
+
+.verReseñas{
+    @include botones(map-get($map:$paleta, $key: colorSecundario),none,5px,8px,350px);
+    &:hover{
+       background-color: map-get($map: $paleta, $key: hoverBotones);
+       transition: all 0.5s;
+    }
+    @media (min-width:0px) and (max-width:1200px) {
+        width: 110px;
+        margin: 0;
+    } 
+}
+.ipc-media__img .ipc-image {
+    width: 100%;
+    max-width: 100%; 
+    height:auto;
+    display:block;
+}
+.postersNext{
+        right: 0em;
+        top: 59em;
+        width: 15em;
+
+}
+.postersBack{
+    left: 0em;
+    top: 59em;
+    width: 15em;
+}
