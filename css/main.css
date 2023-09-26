@@ -126,7 +126,7 @@ img.birrete:hover {
   --bs-gutter-x: 0;
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 768px) {
   .carousel {
     display: none;
   }
@@ -158,67 +158,70 @@ div h5.descripcionCarousel, div p.descripcionCarousel {
   color: white;
 }
 
-.aVer {
-  padding-left: 130px;
-  height: fit-content;
-}
-@media only screen and (min-width: 991px) and (max-width: 1200px) {
-  .aVer {
-    padding-left: 0;
-  }
-  .aVer.carousel-control-prev {
-    left: 0px;
-  }
-}
-
-.carousel-control-next {
-  right: 0em;
-}
-
-.carousel-control-prev {
-  left: 8.1em;
-}
 @media only screen and (min-width: 991px) and (max-width: 1200px) {
   .carousel-control-prev {
     left: 0px;
   }
 }
 
+.carousel-inner {
+  height: fit-content;
+}
+
 .contenedorDeComentarios {
   display: flex;
   flex-direction: row;
   align-items: none;
-  justify-content: none;
-  top: 40px;
-  right: 40px;
+  justify-content: start;
+  top: 10%;
+  right: 10%;
   bottom: 0px;
   left: 0px;
-  height: 380px;
+  height: 26em;
   width: 80%;
-  overflow-y: scroll;
-  overflow-x: hidden;
   padding: 0;
 }
 
+.contenedorCarouselComentarios {
+  margin-left: 8em;
+  width: calc(100vw - 10em);
+  flex-wrap: nowrap;
+  height: fit-content;
+}
+@media (min-width: 0px) and (max-width: 1200px) {
+  .contenedorCarouselComentarios.contenedorCarouselComentarios {
+    margin-left: 0;
+    width: max-content;
+  }
+}
+
 .fotoUsuario {
-  height: 100px;
-  width: 100px;
+  height: 40%;
+  width: 10%;
   padding: 0;
 }
 
 .comentarios {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: none;
-  height: auto;
+  height: fit-content;
   width: 100%;
   padding: 0%;
 }
 
 .contenedorPadreComentarios {
   padding: 0;
-  width: 100vw;
+  margin-left: 0%;
+  width: 100%;
+  margin-right: -100%;
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
 }
 @media (min-width: 0px) and (max-width: 1200px) {
   .contenedorPadreComentarios {
@@ -231,12 +234,15 @@ div h5.descripcionCarousel, div p.descripcionCarousel {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: fit-content;
 }
 
 textarea {
   height: 20%;
   width: 100%;
+}
+
+p.reseñas {
+  font-size: 1em;
 }
 
 section.contenedorPostersDePeliculas {
@@ -245,12 +251,7 @@ section.contenedorPostersDePeliculas {
   align-items: space-between;
   justify-content: space-around;
   width: 100vw;
-}
-section div.tituloFiltro {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
 }
 section div.position {
   position: relative;
@@ -263,22 +264,19 @@ section div.primerFilaPosters, section div.tercerFilaPosters {
   flex-direction: row;
   align-items: none;
   justify-content: center;
-  flex-wrap: wrap;
-  padding-top: 20px;
 }
 section div.posterPelicula {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 25em;
+  justify-content: space-around;
+  width: 20.5%;
   text-align: center;
+  height: 100%;
 }
-@media (min-width: 0px) and (max-width: 1200px) {
+@media (min-width: 0px) and (max-width: 768px) {
   section div.posterPelicula.posterPelicula {
-    width: 150px;
-    padding: 20px;
-    padding-top: 0;
+    width: 35%;
   }
 }
 section div.segundaFilaPosters {
@@ -286,17 +284,11 @@ section div.segundaFilaPosters {
   flex-direction: row;
   align-items: none;
   justify-content: center;
-  flex-wrap: wrap-reverse;
-  padding-top: 20px;
 }
 section.mobile {
   display: none;
 }
-@media (min-width: 0px) and (max-width: 1200px) {
-  section.posterPelicula {
-    width: 150px;
-    padding: 20px;
-  }
+@media (min-width: 0px) and (max-width: 768px) {
   section.mobile {
     display: block;
   }
@@ -306,31 +298,31 @@ section.mobile {
 }
 
 img.posters {
-  height: 31.2em;
-  width: 21.7em;
+  height: 62.8%;
+  width: 100%;
+  padding: 10px;
 }
-@media (min-width: 0px) and (max-width: 1200px) {
+@media (min-width: 0px) and (max-width: 768px) {
   img.posters.posters {
-    height: 160px;
-    width: 130px;
-  }
-  img.posters.posters:hover {
-    display: none;
+    height: 62.8%;
+    width: 100%;
   }
 }
 img.botonFavoritos {
-  height: 34px;
-  width: 24px;
+  height: 15%;
+  width: 20%;
   position: absolute;
-  bottom: 250px;
-  right: 106px;
+  top: 0;
+  left: 0%;
+  margin: 10px;
 }
 img.botonFavoritos2 {
-  height: 68px;
-  width: 48px;
+  height: 4em;
+  width: 2.7em;
   position: absolute;
-  bottom: 600px;
-  right: 327px;
+  top: 0%;
+  margin: 10px;
+  left: 0;
   cursor: pointer;
 }
 img.botonFavoritos2.botonFavoritos2:hover {
@@ -345,6 +337,11 @@ img.botonFavoritos2.hover {
   display: block;
   transition: opacity 0.2s;
 }
+@media (min-width: 0px) and (max-width: 1200px) {
+  img.botonFavoritos2:hover, img.botonFavoritos2 .hover {
+    display: none;
+  }
+}
 img.hover:hover {
   display: block;
 }
@@ -353,16 +350,11 @@ p.descripcionPeli {
   padding-left: 30px;
   padding-right: 30px;
 }
-@media (min-width: 0px) and (max-width: 1200px) {
+@media (min-width: 0px) and (max-width: 768px) {
   p.descripcionPeli {
-    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: start;
-  }
-}
-
-@media (min-width: 0px) and (max-width: 1200px) {
-  .desktop {
-    display: none;
   }
 }
 
@@ -371,36 +363,24 @@ p.descripcionPeli {
   border: none;
   border-radius: 5px;
   padding: 8px;
-  width: 350px;
+  width: 80%;
 }
 .verReseñas:hover {
   background-color: #F7B147;
   transition: all 0.5s;
 }
-@media (min-width: 0px) and (max-width: 1200px) {
+@media (min-width: 0px) and (max-width: 768px) {
   .verReseñas {
-    width: 110px;
+    width: 90%;
     margin: 0;
   }
 }
 
-.ipc-media__img .ipc-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.postersNext {
-  right: 0em;
-  top: 59em;
-  width: 15em;
-}
-
-.postersBack {
-  left: 0em;
-  top: 59em;
-  width: 15em;
+div.tituloFiltro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 nav.subMenu {
@@ -415,11 +395,19 @@ nav ul.subMenuItems {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  width: 100vw;
+  justify-content: space-around;
+  width: calc(100vw - 1.1em);
   padding-left: 8px;
   padding-right: 8px;
   color: black;
+}
+
+footer.backgroundFooter {
+  background-color: #CA4A65;
+}
+footer .colorText, footer p {
+  color: #fafafa;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */

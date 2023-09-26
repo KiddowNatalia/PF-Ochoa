@@ -1,0 +1,48 @@
+*{padding: 0;
+text-align: center;
+}
+&.contenedorFormularioRegistro{
+@include flexBox(flex,column ,start,center);
+width: 90%;
+margin-top: 96px;
+padding-left: 7%;
+@media only screen and (min-width: 0px) and (max-width: 720px){
+padding: 0;
+@include flexBox(flex,column ,center,center);
+}
+}
+.registroInput{
+width: 100%;
+
+}
+.cancelarSuscripcion{
+@include botones(inherit,solid 1px black,6px,8px,auto);
+@include margenes(7px,0px,5px,0px);
+display: block;
+width: fit-content;
+background-color: map-get($map: $paleta, $key:'white');
+margin-right: 8px;
+margin-top: 16px
+}   
+.suscripcion{
+@include botones(inherit,inherit,6px,8px,auto);
+@include margenes(7px,0px,5px,0px);
+display: block;
+width: fit-content;
+background-color: map-get($map: $paleta, $key:colorSecundario);
+margin-top: 16px
+}
+.botonesSuscripcion{
+@include flexBox(flex,row ,start,start);
+}
+&.registroEstudiantil{
+@include flexBox(flex,row ,start,center);
+}
+.monologo{
+width: 50%;
+padding-top: 96px;
+padding-right: 7%;
+@media only screen and (min-width: 0px) and (max-width: 720px){
+display: none;
+}
+}
