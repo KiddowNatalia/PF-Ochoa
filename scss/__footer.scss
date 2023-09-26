@@ -1,0 +1,12 @@
+footer{
+    &.backgroundFooter{
+        background-color: #CA4A65;
+    }   
+    .colorText{
+        color: map-get($map: $paleta, $key: 'white');
+        text-decoration: none;
+    }
+    p{
+        @extend .colorText; 
+    }    
+}

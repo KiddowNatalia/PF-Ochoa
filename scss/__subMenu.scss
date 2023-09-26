@@ -42,8 +42,8 @@ nav{
     }
     ul{
         &.subMenuItems{
-            @include flexBox(flex,row , center ,space-between);
-            width: 100vw;
+            @include flexBox(flex,row , center ,space-around);
+            width: calc(100vw - 1.1em);
             padding-left: 8px;
             padding-right: 8px;
             color: black;
