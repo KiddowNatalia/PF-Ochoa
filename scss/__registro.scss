@@ -1,0 +1,94 @@
+
+//ACA
+@mixin flexBox($display,$flexDirection,$alignItems,$justifyCoxntent){
+    display: $display;
+    flex-direction: $flexDirection;
+    align-items: $alignItems;
+    justify-content: $justifyCoxntent;
+}
+@mixin botones($color,$border,$radius,$padding,$width){
+    background-color: $color;
+    border: $border;
+    border-radius: $radius;
+    padding: $padding;
+    width: $width;
+}
+@mixin imagenes($height,$width,$margin,$padding){
+    height: $height;
+    width: $width;
+    margin: $margin;
+    padding: $padding;
+}
+@mixin margenes($top,$right,$bottom,$left){
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+@mixin tamaño($height,$width){
+    height: $height;
+    width: $width;
+}
+@mixin margenPadding($margen,$padding){
+    margin: $margen;
+    padding: $padding;
+}
+form{
+    .itemsRegistro{
+        width: 100%
+    }
+    &.formularioRegistro{
+        @include flexBox(flex,column ,center ,center);
+        width: 100%
+    }
+    .registroItems{
+        @include flexBox(flex,column ,start ,center);
+        text-decoration: none;
+        width: 50%
+    }
+}
+div{
+    .tituloRegistro{
+        padding-left: 2%;
+        padding-bottom: 2%;
+    }
+    &.contenedorFormularioRegistro{
+        @include flexBox(flex,column ,start,center);
+        width: 90%;
+        margin-top: 96px;
+        padding-left: 7%;
+    }
+    .registroInput{
+        width: 100%;
+        
+    }
+    .cancelarSuscripcion{
+        @include botones(inherit,solid 1px black,6px,8px,auto);
+        @include margenes(7px,0px,5px,0px);
+        display: block;
+        width: fit-content;
+        background-color: map-get($map: $paleta, $key:'white');
+        margin-right: 8px;
+        margin-top: 16px
+    }   
+    .suscripcion{
+        @include botones(inherit,inherit,6px,8px,auto);
+        @include margenes(7px,0px,5px,0px);
+        display: block;
+        width: fit-content;
+        background-color: map-get($map: $paleta, $key:colorSecundario);
+        margin-top: 16px
+    }
+    .botonesSuscripcion{
+        @include flexBox(flex,row ,start,start);
+    }
+    &.registroEstudiantil{
+        @include flexBox(flex,row ,start,center);
+    }
+    .monologo{
+        width: 50%;
+        padding-top: 96px;
+        padding-right: 7%;
+    }
+}
+

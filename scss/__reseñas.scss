@@ -32,6 +32,13 @@
     margin: $margen;
     padding: $padding;
 }
+.reseñasTitulo{
+    @include flexBox(flex,column,center,center);
+        width: 100%;
+        text-align: center;
+        margin-bottom: 48px;
+        color: map-get($map: $paleta, $key: 'black');
+}
 div{
     &.contenedorBanner{
         @include tamaño(fit-content,100%);
@@ -50,11 +57,8 @@ div{
         @include tamaño(fit-content,90%);
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
         padding: 1rem;
-    }
-    .reseñasTitulo{
-            width: 100%;
-            text-align: center;
-            margin-bottom: 18px;
+        background-color: map-get($map: $paleta, $key: colorPrimario);
+        border-radius: 8px;
     }
     .fotoUsuario1{
         @include imagenes(90px,90px , 0,0 );
@@ -62,8 +66,17 @@ div{
     .tuComentario{
         @include tamaño(10%,100% );
         margin-top: 48px;
+        border-radius: 8px;
+        padding: 16px;
     }
     .comentario{
         @include flexBox(flex,row,center,center);
+    }
+    .reseñasComentario{
+        color: map-get($map: $paleta, $key: 'white');
+    }
+    .enviar1{
+        @include botones(map-get($map: $paleta, $key: colorSecundario),0px ,8px ,8px ,30% );
+        margin-top: 48px;
     }
 }

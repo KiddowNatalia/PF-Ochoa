@@ -26,7 +26,7 @@
           </button>
          </form>
         <div class="navbar-collapse collapse justify-content-end align-content-end" id="navbarColor03" >
-          <img id="birrete" class="birrete" src="img/birrete-estudiantes.png" alt="Birrete estudiantes" href="">
+          <a href="assets/estudiante.html"><img id="birrete" class="birrete" src="img/birrete-estudiantes.png" alt="Birrete estudiantes" ></a>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 displayUl">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
@@ -112,11 +112,11 @@
       <h2 class="m-5 comentariosH2 ">Comentarios</h2>
       <div class="row contenedorDeComentarios">
         <div class="comentarios">
-            <img src="img/avatar-usuarios.jpg" alt="fotoUsuario" class="fotoUsuario">
+            <img src="img/avatar-usuarios.png" alt="fotoUsuario" class="fotoUsuario">
             <p class="reseñas">Lorem ipsum dolor. Ut quo harum, quam aliquid enim hic, repudiandae ducimus! Quas molestiae ipsum totam.</p>
         </div> 
         <div class="comentarios">
-          <img src="img/avatar-usuarios.jpg" alt="fotoUsuario" class="fotoUsuario">
+          <img src="img/avatar-usuarios.png" alt="fotoUsuario" class="fotoUsuario">
           <p class="reseñas">Lorem ipsum dolor. Ut quo harum, quam aliquid enim hic, repudiandae ducimus! Quas molestiae ipsum totam.</p>
         </div>
         
@@ -172,13 +172,13 @@
           <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
             <img class="posters img-fluid" src="img/poster-interestellar.jpg" alt="posterInterestellar">
             <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
-            <button type="button" class=" verReseñas btn-light text-dark"><a  href="">Leer reseñas</a></button>
+            <a class=" verReseñas btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
         </div>
         <div class="posterPelicula position">
            <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
             <img class="posters img-fluid" src="img/poster-oppenheimer.jpg" alt="posterOpenhaimer">
             <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
-            <button type="button" class=" verReseñas btn-light text-dark"><a  href="">Leer reseñas</a></button>
+            <a class=" verReseñas btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
         </div>
     </div>
     <div class="segundaFilaPosters">
@@ -186,13 +186,13 @@
            <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
             <img class="posters img-fluid" src="img/poster-harry-potter.jpg" alt="posterHarryPotter">
             <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
-            <button type="button" class=" verReseñas btn-light text-dark"><a  href="">Leer reseñas</a></button>
+            <a class=" verReseñas btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
         </div>
         <div class="posterPelicula position">
            <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
             <img class="posters img-fluid" src="img/poster-barbie.jpg" alt="posterBarbie">
             <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
-            <button type="button" class=" verReseñas btn-light text-dark"><a  href="">Leer reseñas</a></button>
+            <a class=" verReseñas btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
         </div>
     </div>
     <div class="tercerFilaPosters">
@@ -200,16 +200,52 @@
          <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
           <img class="posters img-fluid" src="img/poster-oppenheimer.jpg" alt="posterOpenhaimer">
           <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
-          <button type="button" class=" verReseñas btn-light text-dark"><a  href="">Leer reseñas</a></button>
+          <a class=" verReseñas btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
       </div>
       <div class="posterPelicula position">
          <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
         <img class="posters img-fluid" src="img/poster-interestellar.jpg" alt="posterInterestellar">
         <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
-        <button type="button" class=" verReseñas btn-light text-dark"><a  href="">Leer reseñas</a></button>
+        <a class=" verReseñas btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
     </div>
 </section>
       <!-- ORDEN EN MOBILE -->
+      <!-- Registrate -->
+  <div class="registroEstudiantil">
+    <div class="contenedorFormularioRegistro">
+      <h2 class="tituloRegistro">Registrate</h2>
+      <form action="" class="formularioRegistro">
+        <ul class="itemsRegistro">
+          <li class="registroItems">
+            <label for="">Nombre</label>
+            <input class="registroInput" type="text">
+          </li class="registroItems">
+          <li class="registroItems">
+            <label for="">Apellido</label>
+            <input class="registroInput" type="text">
+          </li>
+          <li class="registroItems">
+            <label for="">Correo electronico</label>
+            <input class="registroInput" type="email">
+          </li>
+          <li class="registroItems">
+            <label for="">Contraseña</label>
+            <input class="registroInput" type="password">
+          </li>
+          <div class="botonesSuscripcion">
+          <button type="button" class="cancelarSuscripcion"><a href="assets/iniciar-sesion.html">Cancelar</a></button>
+            <button type="button" class="suscripcion"><a  href="assets/suscripcion.html">Suscribite</a></button>
+          </div>
+        </ul>
+      </form>
+    </div>  
+    <div class="monologo">
+      <h2>¿Sos estudiante?</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laboriosam, voluptas, at quo a ipsam blanditiis libero enim qui, nam non ad itaque sed rerum ratione? Et quae nostrum officiis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eveniet nihil possimus quae non, debitis excepturi fugiat laudantium porro sequi quia magnam dicta delectus. Perspiciatis quaerat earum quia dolore iusto! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cumque deleniti non possimus numquam quos quam necessitatibus assumenda consequuntur? Eligendi culpa odit nesciunt labore tempore aliquam neque a, optio similique.</p>
+      <button type="button" class="suscripcion"><a  href="assets/estudiante.html">Suscribite como estudiante</a></button>
+    </div>
+  </div>
+      <!-- Registrate -->
       <!-- FOOTER -->
    <footer class="backgroundFooter mt-5 py-5 my-0">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">

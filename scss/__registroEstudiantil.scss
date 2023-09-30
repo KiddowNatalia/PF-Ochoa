@@ -1,0 +1,6 @@
+.adjuntarCertificado{
+    @include botones(inherit,solid 1px,6px,8px,auto);
+    margin-top: 48px;
+    display: block;
+   width: 100%;
+}
