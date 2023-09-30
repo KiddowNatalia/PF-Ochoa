@@ -499,6 +499,16 @@ div.logoRegistro {
   justify-content: center;
 }
 
+.reseñasTitulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
 div.contenedorBanner {
   height: fit-content;
   width: 100%;
@@ -530,11 +540,8 @@ div.contenedorReseñas {
   width: 90%;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
   padding: 1rem;
-}
-div .reseñasTitulo {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 18px;
+  background-color: #CA4A65;
+  border-radius: 8px;
 }
 div .fotoUsuario1 {
   height: 90px;
@@ -546,12 +553,120 @@ div .tuComentario {
   height: 10%;
   width: 100%;
   margin-top: 48px;
+  border-radius: 8px;
+  padding: 16px;
 }
 div .comentario {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+div .reseñasComentario {
+  color: #fafafa;
+}
+div .enviar1 {
+  background-color: #F8BF68;
+  border: 0px;
+  border-radius: 8px;
+  padding: 8px;
+  width: 30%;
+  margin-top: 48px;
+}
+
+form .itemsRegistro {
+  width: 100%;
+}
+form.formularioRegistro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+form .registroItems {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  text-decoration: none;
+  width: 50%;
+}
+
+div .tituloRegistro {
+  padding-left: 2%;
+  padding-bottom: 2%;
+}
+div.contenedorFormularioRegistro {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 90%;
+  margin-top: 96px;
+  padding-left: 7%;
+}
+div .registroInput {
+  width: 100%;
+}
+div .cancelarSuscripcion {
+  background-color: inherit;
+  border: solid 1px black;
+  border-radius: 6px;
+  padding: 8px;
+  width: auto;
+  top: 7px;
+  right: 0px;
+  bottom: 5px;
+  left: 0px;
+  display: block;
+  width: fit-content;
+  background-color: #fafafa;
+  margin-right: 8px;
+  margin-top: 16px;
+}
+div .suscripcion {
+  background-color: inherit;
+  border: inherit;
+  border-radius: 6px;
+  padding: 8px;
+  width: auto;
+  top: 7px;
+  right: 0px;
+  bottom: 5px;
+  left: 0px;
+  display: block;
+  width: fit-content;
+  background-color: #F8BF68;
+  margin-top: 16px;
+}
+div .botonesSuscripcion {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+}
+div.registroEstudiantil {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+}
+div .monologo {
+  width: 50%;
+  padding-top: 96px;
+  padding-right: 7%;
+}
+
+.adjuntarCertificado {
+  background-color: inherit;
+  border: solid 1px;
+  border-radius: 6px;
+  padding: 8px;
+  width: auto;
+  margin-top: 48px;
+  display: block;
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
