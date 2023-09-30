@@ -1,4 +1,5 @@
-//mixins
+
+//ACA
 @mixin flexBox($display,$flexDirection,$alignItems,$justifyCoxntent){
     display: $display;
     flex-direction: $flexDirection;
@@ -33,24 +34,10 @@
     padding: $padding;
 }
 
-nav{
-    &.subMenu{
-        background-color: map-get($map: $paleta, $key:colorPrimario );
-        @media only screen and (min-width: 991px) and (max-width: 2040px){
-            display: none;
-        }
-    }
-    ul{
-        &.subMenuItems{
-            @include flexBox(flex, row , center ,space-around);
-            display: none;
-            width: calc(100vw - 1.1em);
-            padding-left: 8px;
-            padding-right: 8px;
-            color: black;
-            @media only screen and (min-width: 991px) and (max-width: 2040px){
-            display: block;
-            }
-        }
-    }
+.adjuntarCertificado{
+    @include botones(inherit,solid 1px,6px,8px,auto);
+    margin-top: 48px;
+    display: block;
+   width: 100%;
 }
+

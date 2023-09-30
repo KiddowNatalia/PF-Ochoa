@@ -400,10 +400,16 @@ nav ul.subMenuItems {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  display: none;
   width: calc(100vw - 1.1em);
   padding-left: 8px;
   padding-right: 8px;
   color: black;
+}
+@media only screen and (min-width: 991px) and (max-width: 2040px) {
+  nav ul.subMenuItems {
+    display: block;
+  }
 }
 
 footer.backgroundFooter {
@@ -499,6 +505,22 @@ div.logoRegistro {
   justify-content: center;
 }
 
+.reseñasTitulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 48px;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  .reseñasTitulo {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
 div.contenedorBanner {
   height: fit-content;
   width: 100%;
@@ -521,6 +543,14 @@ div .bannerPelicula {
   margin: 48px;
   padding: 0;
 }
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  div .bannerPelicula {
+    height: fit-content;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+  }
+}
 div.contenedorReseñas {
   display: flex;
   flex-direction: column;
@@ -530,15 +560,12 @@ div.contenedorReseñas {
   width: 90%;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
   padding: 1rem;
-}
-div .reseñasTitulo {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 18px;
+  background-color: #CA4A65;
+  border-radius: 8px;
 }
 div .fotoUsuario1 {
-  height: 90px;
-  width: 90px;
+  height: 10%;
+  width: 3em;
   margin: 0;
   padding: 0;
 }
@@ -546,12 +573,214 @@ div .tuComentario {
   height: 10%;
   width: 100%;
   margin-top: 48px;
+  border-radius: 8px;
+  padding: 16px;
 }
 div .comentario {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 8px 8px -6px rgba(0, 0, 0, 0.3);
+  padding-top: 16px;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  div .comentario {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+  }
+}
+div .reseñasComentario {
+  color: #fafafa;
+}
+div .enviar1 {
+  background-color: #F8BF68;
+  border: 0px;
+  border-radius: 8px;
+  padding: 8px;
+  width: 30%;
+  margin-top: 48px;
+}
+
+form .itemsRegistro {
+  width: 100%;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  form .itemsRegistro {
+    padding: 0;
+  }
+}
+form.formularioRegistro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+form .registroItems {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  text-decoration: none;
+  width: 50%;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  form .registroItems {
+    width: 100%;
+  }
+}
+
+div .tituloRegistro {
+  padding-left: 2%;
+  padding-bottom: 2%;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  div .tituloRegistro {
+    padding: 0;
+    text-align: center;
+  }
+}
+div.contenedorFormularioRegistro {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 90%;
+  margin-top: 96px;
+  padding-left: 7%;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  div.contenedorFormularioRegistro {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+div .registroInput {
+  width: 100%;
+}
+div .cancelarSuscripcion {
+  background-color: inherit;
+  border: solid 1px black;
+  border-radius: 6px;
+  padding: 8px;
+  width: auto;
+  top: 7px;
+  right: 0px;
+  bottom: 5px;
+  left: 0px;
+  display: block;
+  width: fit-content;
+  background-color: #fafafa;
+  margin-right: 8px;
+  margin-top: 16px;
+}
+div .suscripcion {
+  background-color: inherit;
+  border: inherit;
+  border-radius: 6px;
+  padding: 8px;
+  width: auto;
+  top: 7px;
+  right: 0px;
+  bottom: 5px;
+  left: 0px;
+  display: block;
+  width: fit-content;
+  background-color: #F8BF68;
+  margin-top: 16px;
+}
+div .botonesSuscripcion {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+}
+div.registroEstudiantil {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+}
+div .monologo {
+  width: 50%;
+  padding-top: 96px;
+  padding-right: 7%;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  div .monologo {
+    display: none;
+  }
+}
+
+.adjuntarCertificado {
+  background-color: inherit;
+  border: solid 1px;
+  border-radius: 6px;
+  padding: 8px;
+  width: auto;
+  margin-top: 48px;
+  display: block;
+  width: 100%;
+}
+
+img.fotoPerfil {
+  width: 100%;
+  height: 40%;
+  filter: drop-shadow(0px 4px 15px #CA4A65);
+}
+
+.cardPerfil {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 24rem;
+  width: calc(100vw - 4rem);
+  position: relative;
+  border: 1px solid black;
+  border-radius: 8px;
+  fill: #FFF;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  box-shadow: #CA4A65;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .cardPerfil {
+    height: 15rem;
+    width: calc(100vw - 4rem);
+    margin-top: 6rem;
+  }
+}
+
+.profileEdition {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.profileContent {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 12rem;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .profileContent {
+    top: -7.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

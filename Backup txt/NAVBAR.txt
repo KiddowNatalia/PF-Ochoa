@@ -1,0 +1,94 @@
+body{
+    &.row{
+        --bs-gutter-x: 0;
+    }
+
+}
+.background{
+    background-color: map-get($map: $paleta, $key: colorPrimario);
+}
+button {
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    &.miBtn{
+        @include botones(map-get($map:$paleta, $key: colorSecundario),none,5px,8px,auto);
+        &:hover{
+           background-color: map-get($map: $paleta, $key: hoverBotones);
+           transition: all 0.5s;
+        }
+    }
+    &.btn{
+        @include botones(map-get($map:$paleta, $key: 'white'),none,5px,8px,auto);
+        &:hover{
+            background-color: map-get($map: $paleta, $key: grey);
+            transition: all 0.5s;
+         }
+        } 
+        @media only screen and (max-width: 991px){ 
+            &.btn{
+             @include botones(inherit,inherit,2px,0px,auto);
+             @include margenes(2px,0px,5px,2px);
+            display: block;
+            width: fit-content;
+            }
+            &.miBtn{
+            @include botones(inherit,inherit,2px,0px,auto);
+            @include margenes(7px,0px,5px,0px);
+            display: block;
+        }   width: fit-content;
+    }
+}
+.estudiante{
+        display: none;
+        @media only screen and (max-width: 991px){ 
+        display: block;
+        img{
+            &.birreteDesplegable{
+                width: 30px;
+            }
+        }
+    }
+}
+img{
+    &.image1{
+        @include imagenes(38px,auto,0px ,0px);
+            cursor: pointer;
+        }
+    &.image2{
+        display: none;
+    }
+    @media only screen and (min-width: 0px) and (max-width: 767px){
+        &.image2{
+            display: block;
+            width: 38px;
+            cursor: pointer;
+        }
+        &.image1{
+            display: none;
+        }
+    }
+
+    &.birrete{
+        @include botones(none,none ,5px ,0px,35px);
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.1);
+            background-color: map-get($map: $paleta, $key: colorSecundario );
+            transition: all 0.5s;
+        }
+        @media only screen and (max-width: 991px){
+            &.birrete{
+                display: none;
+            }
+        } 
+    } 
+}     
+.navbar-collapse{
+    flex-grow: inherit;
+}
+
+.widthForm{
+    width: 65rem;
+}

@@ -1,0 +1,76 @@
+//mixins
+@mixin flexBox($display,$flexDirection,$alignItems,$justifyCoxntent){
+    display: $display;
+    flex-direction: $flexDirection;
+    align-items: $alignItems;
+    justify-content: $justifyCoxntent;
+}
+@mixin botones($color,$border,$radius,$padding,$width){
+    background-color: $color;
+    border: $border;
+    border-radius: $radius;
+    padding: $padding;
+    width: $width;
+}
+@mixin imagenes($height,$width,$margin,$padding){
+    height: $height;
+    width: $width;
+    margin: $margin;
+    padding: $padding;
+}
+@mixin margenes($top,$right,$bottom,$left){
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+@mixin tamaño($height,$width){
+    height: $height;
+    width: $width;
+}
+@mixin margenPadding($margen,$padding){
+    margin: $margen;
+    padding: $padding;
+}
+
+
+    img{
+        &.fotoPerfil{
+            width: 100%;
+            height: 40%;
+            filter: drop-shadow(0px 4px 15px #CA4A65);
+        }
+    }
+
+.cardPerfil{
+    @include flexBox(flex,row ,center ,center );
+    @include tamaño(24rem, calc(100vw - 4rem));
+    position: relative;
+        border: 1px solid black;
+        border-radius: 8px;
+        fill: #FFF;
+        margin-left: 2rem;
+        margin-top: 2rem;
+        box-shadow: #CA4A65;
+        @media only screen and (min-width: 0px) and (max-width: 768px){
+            @include tamaño(15rem, calc(100vw - 4rem));
+            margin-top: 6rem;
+        }
+    }
+.profileEdition{
+     @include flexBox(flex, row,end, center);
+     height: 100%;
+     width: 100%;
+     position: relative;
+}
+.profileContent{
+    height: 100%;
+    @include flexBox(flex, row,center, center);
+    position: absolute;
+    top: 12rem;
+    @media only screen and (min-width: 0px) and (max-width: 768px){
+        top: -7.5rem;
+    }
+
+  
+}

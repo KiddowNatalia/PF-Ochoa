@@ -38,10 +38,6 @@
         text-align: center;
         margin-bottom: 48px;
         color: map-get($map: $paleta, $key: 'black');
-        @media only screen and (min-width: 0px) and (max-width: 720px){
-            margin-top: 16px;
-            margin-bottom: 16px;
-            }
 }
 div{
     &.contenedorBanner{
@@ -53,10 +49,8 @@ div{
     @include flexBox(flex, row ,center ,center );
     }
     .bannerPelicula{
-        @include imagenes(fit-content,80%,48px,0);
-        @media only screen and (min-width: 0px) and (max-width: 720px){
-        @include imagenes(fit-content,100%,auto,0);
-        }
+        @include imagenes(fit-content,80%,48px,0)
+
     }
     &.contenedorReseñas{
         @include flexBox(flex,column,center,center);
@@ -67,23 +61,16 @@ div{
         border-radius: 8px;
     }
     .fotoUsuario1{
-        @include imagenes(10%,3em, 0,0 );
-        
+        @include imagenes(90px,90px , 0,0 );
     }
     .tuComentario{
         @include tamaño(10%,100% );
         margin-top: 48px;
         border-radius: 8px;
         padding: 16px;
-        
     }
     .comentario{
         @include flexBox(flex,row,center,center);
-        box-shadow: 0 8px 8px -6px rgba($color: #000000, $alpha: 0.3);
-        padding-top: 16px;
-        @media only screen and (min-width: 0px) and (max-width: 720px){
-            @include flexBox(flex,row,start,center);
-            }
     }
     .reseñasComentario{
         color: map-get($map: $paleta, $key: 'white');

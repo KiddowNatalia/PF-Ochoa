@@ -14,10 +14,9 @@
     <link rel="stylesheet" href="../css/main.css"/>
   </head>
   <body class="row grid-contenedor-padre">
-
-
-   <!-- NAV BAR -->
-   <nav class="navbar navbar-expand-lg background" data-bs-theme="light">
+    
+<!-- NAV BAR -->
+<nav class="navbar navbar-expand-lg background" data-bs-theme="light">
     <div class="container-fluid"> 
       <form class="d-flex  widthForm" role="search">
         <a href="../index.html"><img class="me-2 image1" src="../img/logo-cinefilos-grande.png" alt="logo De Cinefilos Comentan"/></a>
@@ -28,27 +27,27 @@
         </button>
        </form>
       <div class="navbar-collapse collapse justify-content-end align-content-end" id="navbarColor03">
-        <a href="assets/estudiante.html"><img id="birrete" class="birrete" src="../img/birrete-estudiantes.png" alt="Birrete estudiantes" ></a>
+        <a href="../assets/estudiante.html"><img id="birrete" class="birrete" src="../img/birrete-estudiantes.png" alt="Birrete estudiantes" ></a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 displayUl">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">Series</a>
+            <a class="nav-link" href="#seriesYPeliculas">Series</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">Películas</a>
+            <a class="nav-link" href="#seriesYPeliculas">Películas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../assets/perfil.html">Perfil</a>
+            <a class="nav-link disabled" href="#">Perfil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link estudiante" href="#">¿Sos estudiante?
-
+              <img class="birreteDesplegable" src="../img/birrete-estudiantes.png" alt="Birrete estudiantes">
             </a>
           </li>
           <button type="button" class=" btn btn-light text-dark me-2"><a href="../assets/iniciar-sesion.html">Ingresar</a></button>
-          <button type="button" class=" miBtn btn-light text-dark me-2"><a  href="">Suscribite</a></button>
+          <button type="button" class=" miBtn btn-light text-dark me-2"><a  href="../assets/suscripcion.html">Suscribite</a></button>
         </ul>
 
       </div>
@@ -61,17 +60,21 @@
 </div>
 
 <section class="col-xl-12 col-sm-10 contenedorFormulario">
-<h2 class="text-sm-center m-4">Subscribite</h2>
+<h2 class="text-sm-center m-4  ">Registrate como estudiante</h2>
 <form action="" class="formulario">
     <label class="labelEInput" for="">Nombre</label>
-        <input class="labelEInput soloInput" type="text" placeholder="Tu nombre">
-        <label class="labelEInput" for="">Apellido</label>
-        <input class="labelEInput soloInput" type="text" placeholder="Tu apellido">
+    <input class="labelEInput soloInput" type="text" placeholder="Tu nombre">
+    <label class="labelEInput" for="">Apellido</label>
+    <input class="labelEInput soloInput" type="text" placeholder="Tu apellido">
+    <label class="labelEInput" for="">DNI estudiante</label>
+    <input class="labelEInput soloInput" type="text" placeholder="Tu DNI">
+    <label class="labelEInput" for="">Universidad</label>
+    <input class="labelEInput soloInput" type="search" placeholder="Tu Universidad">
         <label class="labelEInput" for="">Correo electrónico</label>
         <input class="labelEInput soloInput" type="text" placeholder="Tu correo">
         <label class="labelEInput" for="Contraseña"> Contraseña </label>
         <input class="labelEInput soloInput" type="text" placeholder="Contraseña">
-        
+        <button type="button" class="adjuntarCertificado">Adjuntar certificado de regularidad</button>
         <div class="mb-3 check">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" >
@@ -80,9 +83,9 @@
                 </label>
             </div>
         </div>
-        <button type="button" class="iniciarSesion">Registrate</button>
-        <p class="mt-5 noRegistrado">¿Sos estudiante de cine?</p>
-        <button type="button" class="registrarme">Unite como estudiante</button>
+        <button type="button" class="iniciarSesion">Iniciar sesión</button>
+        <p class="mt-5 noRegistrado">¿Sos nuevo en Cinéfilos?</p>
+        <button type="button" class="registrarme">Crea tu cuenta</button>
 </form>
 </section>  
 <!-- FORMULARIO -->

@@ -1,0 +1,52 @@
+.contenedorDeComentarios{
+    @include flexBox(flex,row,none,start); 
+    @include margenes(10%,10% ,0px ,0px );
+    @include tamaño(26em,80%);
+   
+    padding: 0;
+ 
+}
+.contenedorCarouselComentarios{
+ margin-left: 8em;
+ width:calc(100vw - 10em);
+ flex-wrap: nowrap;
+ height: fit-content;
+ @media (min-width:0px) and (max-width:1200px) {
+    &.contenedorCarouselComentarios{
+        margin-left: 0;
+        width: max-content;
+    }
+}
+}
+
+.fotoUsuario{
+    @include tamaño(40%,10%);
+    padding: 0;
+}
+.comentarios{
+    @include flexBox(flex,row ,start ,none);
+    @include tamaño(fit-content,100%);
+    padding: 0%;
+}
+.contenedorPadreComentarios{
+    padding: 0;
+    margin-left: 0%;
+    width: 100%;
+    margin-right: -100%;
+    @include tamaño(100%,40%);
+    @media (min-width:0px) and (max-width:1200px) {
+            display: none;
+        }
+    @include flexBox(flex,column ,start ,center);    
+} 
+ .cajaComentarios{
+    @include flexBox(flex,column ,center ,center);
+}
+textarea{
+    @include tamaño(20%,100%);
+}
+p{
+    &.reseñas{
+        font-size: 1em;
+    }
+}

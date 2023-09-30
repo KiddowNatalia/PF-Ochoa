@@ -38,7 +38,7 @@
               <a class="nav-link" href="#seriesYPeliculas">Películas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="assets/perfil.html">Perfil</a>
+              <a class="nav-link disabled" href="#">Perfil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link estudiante" href="#">¿Sos estudiante?

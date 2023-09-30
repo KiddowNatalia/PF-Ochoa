@@ -1,0 +1,87 @@
+//mixins
+@mixin flexBox($display,$flexDirection,$alignItems,$justifyCoxntent){
+    display: $display;
+    flex-direction: $flexDirection;
+    align-items: $alignItems;
+    justify-content: $justifyCoxntent;
+}
+@mixin botones($color,$border,$radius,$padding,$width){
+    background-color: $color;
+    border: $border;
+    border-radius: $radius;
+    padding: $padding;
+    width: $width;
+}
+@mixin imagenes($height,$width,$margin,$padding){
+    height: $height;
+    width: $width;
+    margin: $margin;
+    padding: $padding;
+}
+@mixin margenes($top,$right,$bottom,$left){
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+@mixin tamaño($height,$width){
+    height: $height;
+    width: $width;
+}
+@mixin margenPadding($margen,$padding){
+    margin: $margen;
+    padding: $padding;
+}
+.row{
+    --bs-gutter-x: 0;
+}
+.carousel{
+    
+    @media only screen and (max-width: 768px){
+        display: none;
+        
+    }
+}
+button{
+    img{
+        &.arrow{
+            border: solid black 2px;
+            border-radius: 5px;
+            background-color: map-get($map: $paleta, $key: colorSecundario);
+        }
+    }
+}
+div {
+    &.carouselGradiente{
+        position: absolute;
+        background: linear-gradient(180deg,transparent 0,transparent 20%,rgba(0,0,0,.70) 83.5%,rgba(0,0,0,.90));
+        bottom:0px;
+        @include flexBox(flex,row ,center ,center );
+        left: 0;
+        right: 0;
+        height: 200px;
+        padding-bottom: 130px;
+        padding-top: 100px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    h5, p{
+        &.descripcionCarousel{
+        color: white;
+        }
+    }
+}
+  
+
+
+
+.carousel-control-prev{
+       
+    @media only screen and (min-width: 991px) and (max-width: 1200px){
+        left: 0px;   
+    }
+}
+.carousel-inner{
+   
+    height: fit-content;
+}

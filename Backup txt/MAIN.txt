@@ -10,4 +10,3 @@
 @import "__reseñas";
 @import "__registro";
 @import "__registroEstudiantil";
-@import "__perfil";
