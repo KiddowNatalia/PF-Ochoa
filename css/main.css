@@ -245,6 +245,10 @@ p.reseñas {
   font-size: 1em;
 }
 
+a {
+  text-decoration: none;
+}
+
 section.contenedorPostersDePeliculas {
   display: flex;
   flex-direction: column;
@@ -408,6 +412,146 @@ footer.backgroundFooter {
 footer .colorText, footer p {
   color: #fafafa;
   text-decoration: none;
+}
+section.contenedorFormulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 100%;
+  margin-bottom: 8em;
+  align-items: center;
+  margin-bottom: 200px;
+}
+section form.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: fit-content;
+  width: 40%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+@media (min-width: 0px) and (max-width: 576px) {
+  section form.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: fit-content;
+    width: 20rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+  }
+}
+section form .labelEInput {
+  height: 3em;
+  width: 100%;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: end;
+}
+section form .soloInput {
+  padding: 10px;
+  border-radius: 5px;
+}
+section button.iniciarSesion {
+  background-color: #CA4A65;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.625em;
+  width: 100%;
+  padding: 0.625em;
+  margin-top: 2em;
+  color: #fafafa;
+}
+section button.registrarme {
+  background-color: #fafafa;
+  border: solid black 0.1em;
+  border-radius: 0.3em;
+  padding: 0.625em;
+  width: 100%;
+  background-color: #fafafa;
+  margin-top: 2em;
+}
+section .check {
+  display: flex;
+  flex-direction: auto;
+  align-items: start;
+  justify-content: start;
+  margin-top: 2em;
+  width: 100%;
+}
+
+p.noRegistrado {
+  border-top: black 1px solid;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+}
+
+div.logoRegistro {
+  display: flex;
+  flex-direction: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+div.contenedorBanner {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+div.reseñas {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+div .bannerPelicula {
+  height: fit-content;
+  width: 80%;
+  margin: 48px;
+  padding: 0;
+}
+div.contenedorReseñas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 90%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+div .reseñasTitulo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 18px;
+}
+div .fotoUsuario1 {
+  height: 90px;
+  width: 90px;
+  margin: 0;
+  padding: 0;
+}
+div .tuComentario {
+  height: 10%;
+  width: 100%;
+  margin-top: 48px;
+}
+div .comentario {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=main.css.map */

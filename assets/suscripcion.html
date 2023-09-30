@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinéfilos comentan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="../img/logo-cinefilos-mini.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/main.css"/>
+  </head>
+  <body class="row grid-contenedor-padre">
+
+
+   <!-- NAV BAR -->
+   <nav class="navbar navbar-expand-lg background" data-bs-theme="light">
+    <div class="container-fluid"> 
+      <form class="d-flex  widthForm" role="search">
+        <a href="../index.html"><img class="me-2 image1" src="../img/logo-cinefilos-grande.png" alt="logo De Cinefilos Comentan"/></a>
+        <a href="../index.html"><img src="../img/logo-cinefilos-mini.png" class="image2 me-2"/></a>
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       </form>
+      <div class="navbar-collapse collapse justify-content-end align-content-end" id="navbarColor03">
+        <img id="birrete" class="birrete" src="../img/birrete-estudiantes.png" alt="Birrete estudiantes"/>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 displayUl">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#seriesYPeliculas">Series</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#seriesYPeliculas">Películas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link estudiante" href="#">¿Sos estudiante?
+              <img class="birreteDesplegable" src="../img/birrete-estudiantes.png" alt="Birrete estudiantes">
+            </a>
+          </li>
+          <button type="button" class=" btn btn-light text-dark me-2"><a href="../assets/iniciar-sesion.html">Ingresar</a></button>
+          <button type="button" class=" miBtn btn-light text-dark me-2"><a  href="">Suscribite</a></button>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+<!-- NAV BAR -->
+<!-- FORMULARIO -->
+<div class="logoRegistro">
+<a href="../index.html"><img class= "m-4 img-fluid" src="../img/logo-cinefilos-grande.png" alt=""></a>
+</div>
+
+<section class="col-xl-12 col-sm-10 contenedorFormulario">
+<h2 class="text-sm-center m-4">Subscribite</h2>
+<form action="" class="formulario">
+    <label class="labelEInput" for="">Nombre</label>
+        <input class="labelEInput soloInput" type="text" placeholder="Tu nombre">
+        <label class="labelEInput" for="">Apellido</label>
+        <input class="labelEInput soloInput" type="text" placeholder="Tu apellido">
+        <label class="labelEInput" for="">Correo electrónico</label>
+        <input class="labelEInput soloInput" type="text" placeholder="Tu correo">
+        <label class="labelEInput" for="Contraseña"> Contraseña </label>
+        <input class="labelEInput soloInput" type="text" placeholder="Contraseña">
+        
+        <div class="mb-3 check">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" >
+                <label class="form-check-label" for="disabledFieldsetCheck">
+                Recordar mi contraseña
+                </label>
+            </div>
+        </div>
+        <button type="button" class="iniciarSesion">Registrate</button>
+        <p class="mt-5 noRegistrado">¿Sos estudiante de cine?</p>
+        <button type="button" class="registrarme">Unite como estudiante</button>
+</form>
+</section>  
+<!-- FORMULARIO -->
+     <!-- FOOTER -->
+<footer class="backgroundFooter mt-5 py-5 my-0">
+<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+  <li class="nav-item tex"><a href="#" class="nav-link px-2 colorText">Aplicación mobile</a></li>
+  <li class="nav-item"><a href="#" class="nav-link px-2 colorText">Facebook</a></li>
+  <li class="nav-item"><a href="#" class="nav-link px-2 colorText">Instagram</a></li>
+  <li class="nav-item"><a href="#" class="nav-link px-2 colorText">Twitter</a></li>
+</ul>
+<p class="text-center "> &copy; 2023 Company, Kiddow's design </p>
+</footer>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>
