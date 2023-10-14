@@ -783,4 +783,29 @@ img.fotoPerfil {
   }
 }
 
+nav.subMenu {
+  background-color: #CA4A65;
+}
+@media only screen and (min-width: 991px) and (max-width: 2040px) {
+  nav.subMenu {
+    display: none;
+  }
+}
+nav ul.subMenuItems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  display: none;
+  width: calc(100vw - 1.1em);
+  padding-left: 8px;
+  padding-right: 8px;
+  color: black;
+}
+@media only screen and (min-width: 991px) and (max-width: 2040px) {
+  nav ul.subMenuItems {
+    display: block;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
