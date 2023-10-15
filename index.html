@@ -14,252 +14,257 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="row grid-contenedor-padre">
-    <!-- NAV BAR -->
-    <nav class="navbar navbar-expand-lg background" data-bs-theme="light">
-      <div class="container-fluid"> 
-        <form class="d-flex  widthForm" role="search">
-          <a href="index.html"><img class="me-2 image1" src="img/logo-cinefilos-grande.png" alt="logo De Cinefilos Comentan"/></a>
-          <a href="index.html"><img src="img/logo-cinefilos-mini.png" class="image2 me-2"/></a>
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-         </form>
-        <div class="navbar-collapse collapse justify-content-end align-content-end" id="navbarColor03" >
-          <a href="assets/estudiante.html"><img id="birrete" class="birrete" src="img/birrete-estudiantes.png" alt="Birrete estudiantes" ></a>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 displayUl">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#seriesYPeliculas">Series</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#seriesYPeliculas">Películas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="assets/perfil.html">Perfil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link estudiante" href="#">¿Sos estudiante?
-                <img class="birreteDesplegable" src="img/birrete-estudiantes.png" alt="Birrete estudiantes">
-              </a>
-            </li>
-            <button type="button" class=" btn btn-light text-dark me-2"><a href="assets/iniciar-sesion.html">Ingresar</a></button>
-            <button type="button" class=" miBtn btn-light text-dark me-2"><a  href="assets/suscripcion.html">Suscribite</a></button>
-          </ul>
-
+    <header>
+      <nav class="navbar navbar-expand-lg background" data-bs-theme="light">
+        <div class="container-fluid"> 
+          <form class="d-flex  widthForm" role="search">
+            <a href="index.html"><img class="me-2 navBar__bigLogo" src="img/logo-cinefilos-grande.png" alt="Logo de Cinefilos Comentan"/></a>
+            <a href="index.html"><img src="img/logo-cinefilos-mini.png" class="navBar__miniLogo me-2"/></a>
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </form>
+          <div class="navbar-collapse collapse justify-content-end align-content-end" id="navbarColor03" >
+            <a href="assets/estudiante.html"><img id="Graduation cap" class="navBar__graduationCap" src="img/birrete-estudiantes.png" alt="Graduation cap" ></a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 displayUl">
+              <li class="navBar__item">
+                <a class="nav-link nav__item" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="navBar__item">
+                <a class="nav-link nav__item" href="#seriesYPeliculas">Series</a>
+              </li>
+              <li class="navBar__item">
+                <a class="nav-link nav__item" href="#seriesYPeliculas">Películas</a>
+              </li>
+              <li class="navBar__item">
+                <a class="nav-link nav__item" href="assets/perfil.html">Perfil</a>
+              </li>
+              <li class="navBar__item">
+                <a class="nav__BarLink navBar__graduationCap__dropDown" href="#">¿Sos estudiante?
+                  <img class="navBar__graduationCap__dropDown" src="img/birrete-estudiantes.png" alt="Birrete estudiantes">
+                </a>
+              </li>
+              <button type="button" class="navBar__button__logIn btn btn-light text-dark me-2"><a href="assets/iniciar-sesion.html">Ingresar</a></button>
+              <button type="button" class=" navBar__button__signUp  btn-light text-dark me-2"><a  href="#formularioRegistro">Suscribite</a></button>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-    <!-- SUB MENU MOBILE -->
-    <nav class="subMenu">
-      <ul class="navbar-nav subMenuItems">
-        <li class="subMenuItems">
-          <a class="nav-link" href="#seriesYPeliculas">Series</a>
-        </li>
-        <li class="subMenuItems">
-          <a class="nav-link" href="#seriesYPeliculas">Películas</a>
-        </li>
-        <li class="subMenuItems">
-          <a class="nav-link disabled" href="#">Inicio</a>
-        </li>
-        <li class="subMenuItems disabled">
-          <a class="nav-link disabled" href="#">Perfil</a>
-        </li>
-        <li class="subMenuItems">
-          <a class="nav-link disabled" href="#">Amigos</a>
-        </li>
-    </ul></nav>
-     <!-- SUB MENU MOBILE -->
-    <!-- FIN NAV BAR -->
-    <!-- CAROUSEL -->
-    <section class="contenedorCarouselComentarios row right">
+      </nav>
+      <!-- <nav class="subMenu">
+        <ul class="navbar-nav subMenu__items">
+          <li class="subMenu__items">
+            <a class="nav-link" href="#seriesYPeliculas">Series</a>
+          </li>
+          <li class="subMenu__items">
+            <a class="nav-link" href="#seriesYPeliculas">Películas</a>
+          </li>
+          <li class="subMenu__items">
+            <a class="nav-link" href="#">Inicio</a>
+          </li>
+          <li class="subMenu__items">
+            <a class="nav-link" href="./assets/perfil.html">Perfil</a>
+          </li>
+          <li class="subMenu__items">
+            <a class="nav-link" href="#">Amigos</a>
+          </li>
+        </ul>
+      </nav> -->
+    </header>
+    <section class="carousel__desktop row right">
       <div id="carouselExampleDark" class=" m-xl-5 col-sm-12 m-sm-0 row col-xl-6 carousel  slide">
         <div class="carousel-inner">
-          <button class="carousel-control-prev arrowContainer" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <img class="arrow" src="/img/iconos/arrow.png" alt="Boton atras">
-           </button>
-           <button class=" carousel-control-next " type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-             <img class="arrow" src="/img/iconos/arrow-right.png" alt="boton Next">
-           </button>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <img class="carousel__desktop__arrow" src="/img/iconos/arrow.png" alt="Boton atras">
+          </button>
+          <button class=" carousel-control-next " type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <img class="carousel__desktop__arrow" src="/img/iconos/arrow-right.png" alt="boton Next">
+          </button>
           <div class="carousel-item active " data-bs-interval="10000">
             <img src="img/banner-barbie-carousel.jpg" class="d-block w-100 h-30" alt="poster de Barbie">
-            <div class=" carouselGradiente carousel-caption d-none d-md-block">
-              <h5 class="descripcionCarousel">Nuevo estreno</h5>
-              <p class="descripcionCarousel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere neque aut ratione exercitationem, optio sed sapiente, sint, eos et amet suscipit doloremque architecto atque dolor at consequuntur inventore saepe ex.</p>
+            <div class="carousel__gradient carousel-caption d-none d-md-block">
+              <h5 class="carousel__description">Barbie la película</h5>
+              <p class="carousel__description">Después de ser expulsada de Barbieland por no ser una muñeca de aspecto perfecto, Barbie parte hacia el mundo humano para encontrar la verdadera felicidad.</p>
             </div>
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/banner-harry-potter-carousel.jpg" class="d-flex w-100 h-50" alt="Harry Potter poster">
-            <div class="carouselGradiente carousel-caption d-none d-md-block">
-              <h5 class="descripcionCarousel">Second slide label</h5>
-              <p class="descripcionCarousel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius illum optio odio! Alias vel nobis omnis, incidunt doloremque voluptates necessitatibus, a accusamus, reiciendis possimus consequatur consectetur tempora dicta explicabo nam.</p>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="img/banner-harry-potter-carousel.jpg" class="d-flex w-100 h-50" alt="Harry Potter Poster">
+              <div class="carousel__gradient carousel-caption d-none d-md-block">
+                <h5 class="carousel__description">Harry Potter</h5>
+                <p class="carousel__description">El día de su cumpleaños, Harry Potter descubre que es hijo de dos conocidos hechiceros, de los que ha heredado poderes mágicos. Debe asistir a una famosa escuela de magia y hechicería, donde entabla una amistad con dos jóvenes que se convertirán en sus compañeros de aventura.</p>
+              </div>
             </div>
-          </div>
           <div class="carousel-item">
-            <img src="img/banner-oppenheimer-carousel.jpg" class="w-100" alt="...">
-            <div class="carouselGradiente carousel-caption d-none d-md-block">
-              <h5 class="descripcionCarousel">Third slide label</h5>
-              <p class="descripcionCarousel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores sit minima delectus consequuntur nemo repellat iste qui in tempore voluptatem earum quisquam fugiat sint distinctio saepe alias quaerat, similique harum.</p>
+            <img src="img/banner-oppenheimer-carousel.jpg" class="w-100" alt="Banner Oppenheimer">
+            <div class="carousel__gradient carousel-caption d-none d-md-block">
+              <h5 class="carousel__description">Oppenheimer</h5>
+              <p class="carousel__description">Durante la Segunda Guerra Mundial, el teniente general Leslie Groves designa al físico J. Robert Oppenheimer para un grupo de trabajo que está desarrollando el Proyecto Manhattan, cuyo objetivo consiste en fabricar la primera bomba atómica.</p>
             </div>
           </div>
         </div>
       </div>
-      <!-- FIN DEL CAROUSEL -->
-      <!-- CAJA DE COMENTARIOS -->
-    <div class="contenedorPadreComentarios ">
-      <h2 class="m-5 comentariosH2 ">Comentarios</h2>
-      <div class="row contenedorDeComentarios">
-        <div class="comentarios">
-            <img src="img/avatar-usuarios.png" alt="fotoUsuario" class="fotoUsuario">
-            <p class="reseñas">Lorem ipsum dolor. Ut quo harum, quam aliquid enim hic, repudiandae ducimus! Quas molestiae ipsum totam.</p>
-        </div> 
-        <div class="comentarios">
-          <img src="img/avatar-usuarios.png" alt="fotoUsuario" class="fotoUsuario">
-          <p class="reseñas">Lorem ipsum dolor. Ut quo harum, quam aliquid enim hic, repudiandae ducimus! Quas molestiae ipsum totam.</p>
-        </div>
-        
-        <textarea class="cajaComentarios" name="cajaComentarios" id="" cols="30" rows="10" placeholder="Escribe tu comentario"></textarea>
-        <button class="enviar">Enviar</button>
-        
-      </div>
-    </div>
-  </section>
-    <!-- FIN DE CAJA DE COMENTARIOS -->
-    <!-- SERIES Y PELICULAS -->
-    
-    <div class="tituloFiltro">
-      <h2 id="seriesYPeliculas" class=" m-3 me-0 text-center text-xl-center text-sm-center m-sm-4 ">Series y películas</h2>
-      <img src="img/iconos/filtro-busqueda.png" alt="Filtro de busqueda">
-    </div>
-  <section class="contenedorPostersDePeliculas desktop">
-      <div class="primerFilaPosters">
-        <div class="posterPelicula position2">
-          <img class="botonFavoritos2" src="/img/banderin.png" alt="Boton agregar">
-          <img class="botonFavoritos2 hover" src="/img/banderin-hover.png" alt="Boton agregar">
-            <img class="posters" src="img/poster-barbie.jpg" alt="posterBarbie" >
-            <p class="mt-xl-3 text-wrap descripcionPeli">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cupiditate maxime. Porro beatae accusantium dicta, laudantium repudiandae recusandae enim nostrum libero.</p>
-            <a class=" verReseñas btn-light text-dark me-2" href="./assets/reseñas.html">Leer reseñas</a>
-        </div>
-          <div class="posterPelicula position2">
-            <img class="botonFavoritos2" src="/img/banderin.png" alt="Boton agregar">
-            <img class="botonFavoritos2 hover" src="/img/banderin-hover.png" alt="Boton agregar">
-              <img class="posters img-fluid" src="img/poster-interestellar.jpg" alt="posterInterestellar">
-              <p class="mt-xl-3 text-wrap descripcionPeli">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cupiditate maxime. Porro beatae accusantium dicta, laudantium repudiandae recusandae enim nostrum libero.</p>
-              <a class=" verReseñas btn-light text-dark me-2" href="./assets/reseñas.html">Leer reseñas</a>
+      <div class="comments__container">
+        <h2 class="m-5">Comentarios</h2>
+        <div class="row comments">
+          <div class="comments">
+            <img src="img/User Pic 2.png" alt="Foto Usuario" class="comments__userPhoto">
+            <p class="comments__review">Con el nivel de expectativa alrededor desde el anuncio del proyecto y los múltiples cambios ocurridos en el proceso (Un guion escrito por la Ganadora del Oscar Diablo Cody, Amy Schumer y Anne Hathaway en la mira para protagonizar)</p>
+          </div> 
+          <div class="comments">
+            <img src="img/User Pic 1.png" alt="Foto Usuario" class="comments__userPhoto">
+            <p class="comments__review">Es tremendo, tener el poder, capacidad, elenco e inagotables recursos para materializar una pelicula que pudiera transmitir un poderoso. </p>
           </div>
-          <div class="posterPelicula position2">
-            <img class="botonFavoritos2" src="/img/banderin.png" alt="Boton agregar">
-            <img class="botonFavoritos2 hover" src="/img/banderin-hover.png" alt="Boton agregar">
-              <img class="posters img-fluid" src="img/poster-oppenheimer.jpg" alt="posterInterestellar">
-              <p class="mt-xl-3 text-wrap descripcionPeli">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cupiditate maxime. Porro beatae accusantium dicta, laudantium repudiandae recusandae enim nostrum libero.</p>
-              <a class=" verReseñas btn-light text-dark me-2" href="./assets/reseñas.html">Leer reseñas</a>
-          </div>
-          <div class="posterPelicula position2">
-            <img class="botonFavoritos2" src="/img/banderin.png" alt="Boton agregar">
-            <img class="botonFavoritos2 hover" src="/img/banderin-hover.png" alt="Boton agregar">
-            <img class="posters img-fluid" src="img/poster-interestellar.jpg" alt="posterInterestellar">
-            <p class="mt-xl-3 text-wrap descripcionPeli">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cupiditate maxime. Porro beatae accusantium dicta, laudantium repudiandae recusandae enim nostrum libero.</p>
-            <a class=" verReseñas btn-light text-dark me-2" href="./assets/reseñas.html">Leer reseñas</a>
-        </div>    
+          <textarea class="comments__textArea" name="cajaComentarios" id="" cols="30" rows="10" placeholder="Escribe tu comentario"></textarea>
+          <button class="enviar">Enviar</button>
+        </div>
       </div>
-    </section> 
-          <!-- ORDEN EN MOBILE -->
-  <section class="contenedorPostersDePeliculas mobile">
-      <div class="primerFilaPosters">
-        <div class="posterPelicula position">
-          <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
-            <img class="posters img-fluid" src="img/poster-interestellar.jpg" alt="posterInterestellar">
-            <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
-            <a class=" verReseñas btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
-        </div>
-        <div class="posterPelicula position">
-           <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
-            <img class="posters img-fluid" src="img/poster-oppenheimer.jpg" alt="posterOpenhaimer">
-            <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
-            <a class=" verReseñas btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
-        </div>
-    </div>
-    <div class="segundaFilaPosters">
-        <div class="posterPelicula position">
-           <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
-            <img class="posters img-fluid" src="img/poster-harry-potter.jpg" alt="posterHarryPotter">
-            <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
-            <a class=" verReseñas btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
-        </div>
-        <div class="posterPelicula position">
-           <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
-            <img class="posters img-fluid" src="img/poster-barbie.jpg" alt="posterBarbie">
-            <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
-            <a class=" verReseñas btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
-        </div>
-    </div>
-    <div class="tercerFilaPosters">
-      <div class="posterPelicula position">
-         <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
-          <img class="posters img-fluid" src="img/poster-oppenheimer.jpg" alt="posterOpenhaimer">
-          <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
-          <a class=" verReseñas btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
+    </section>
+    <main>
+      <div class="tituloFiltro">
+        <h2 id="seriesYPeliculas" class=" m-3 me-0 text-center text-xl-center text-sm-center m-sm-4 ">Series y películas</h2>
+        <img src="img/iconos/filtro-busqueda.png" alt="Filtro de busqueda">
       </div>
-      <div class="posterPelicula position">
-         <img class="botonFavoritos" src="/img/banderin.png" alt="Boton agregar">
-        <img class="posters img-fluid" src="img/poster-interestellar.jpg" alt="posterInterestellar">
-        <p class="mt-xl-3 text-wrap descripcionPeli">Titulo pelicula - director</p>
-        <a class=" verReseñas btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
-    </div>
-</section>
-      <!-- ORDEN EN MOBILE -->
-      <!-- Registrate -->
-  <div class="registroEstudiantil">
-    <div class="contenedorFormularioRegistro">
-      <h2 class="tituloRegistro">Registrate</h2>
-      <form action="" class="formularioRegistro">
-        <ul class="itemsRegistro">
-          <li class="registroItems">
-            <label for="">Nombre</label>
-            <input class="registroInput" type="text">
-          </li class="registroItems">
-          <li class="registroItems">
-            <label for="">Apellido</label>
-            <input class="registroInput" type="text">
-          </li>
-          <li class="registroItems">
-            <label for="">Correo electronico</label>
-            <input class="registroInput" type="email">
-          </li>
-          <li class="registroItems">
-            <label for="">Contraseña</label>
-            <input class="registroInput" type="password">
-          </li>
-          <div class="botonesSuscripcion">
-          <button type="button" class="cancelarSuscripcion"><a href="assets/iniciar-sesion.html">Cancelar</a></button>
-            <button type="button" class="suscripcion"><a  href="assets/suscripcion.html">Suscribite</a></button>
+      <section class="container__seriesMovies desktop">
+        <div class="container__seriesMovies__firstRow">
+          <div class="container__seriesMovies__movieInfo">
+            <img class="container__seriesMovies__favoriteButton" src="/img/banderin.png" alt="Boton agregar">
+            <img class="container__seriesMovies__favoriteButton hover" src="/img/banderin-hover.png" alt="Boton agregar">
+            <img class="container__seriesMovies__moviePoster" src="img/poster-barbie.jpg" alt="Poster Barbie" >
+            <p class="mt-xl-3 text-wrap container__seriesMovies__movieDescription">Barbie lleva una vida ideal en Barbieland, allí todo es perfecto, con chupi fiestas llenas de música y color, y todos los días son el mejor día. Barbie se hace algunas preguntas, cuestiones que no encajan con el mundo en el que ella vive. 
+
+            </p>
+            <a class="container__seriesMovies__openReviews btn-light text-dark me-2" href="./assets/reseñas.html">Leer reseñas</a>
           </div>
-        </ul>
-      </form>
-    </div>  
-    <div class="monologo">
-      <h2>¿Sos estudiante?</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laboriosam, voluptas, at quo a ipsam blanditiis libero enim qui, nam non ad itaque sed rerum ratione? Et quae nostrum officiis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eveniet nihil possimus quae non, debitis excepturi fugiat laudantium porro sequi quia magnam dicta delectus. Perspiciatis quaerat earum quia dolore iusto! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cumque deleniti non possimus numquam quos quam necessitatibus assumenda consequuntur? Eligendi culpa odit nesciunt labore tempore aliquam neque a, optio similique.</p>
-      <button type="button" class="suscripcion"><a  href="assets/estudiante.html">Suscribite como estudiante</a></button>
-    </div>
-  </div>
-      <!-- Registrate -->
-      <!-- FOOTER -->
-   <footer class="backgroundFooter mt-5 py-5 my-0">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item tex"><a href="#" class="nav-link px-2 colorText">Aplicación mobile</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 colorText">Facebook</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 colorText">Instagram</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 colorText">Twitter</a></li>
-    </ul>
-    <p class="text-center "> &copy; 2023 Company, Kiddow's design </p>
-  </footer>
+          <div class="container__seriesMovies__movieInfo">
+            <img class="container__seriesMovies__favoriteButton" src="/img/banderin.png" alt="Boton agregar">
+            <img class="container__seriesMovies__favoriteButton hover" src="/img/banderin-hover.png" alt="Boton agregar">
+            <img class="container__seriesMovies__moviePoster img-fluid" src="img/poster-interestellar.jpg" alt="Poster Interestellar">
+            <p class="mt-xl-3 text-wrap container__seriesMovies__movieDescription">Gracias a un descubrimiento, un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida allí.</p>
+            <a class="container__seriesMovies__openReviews btn-light text-dark me-2" href="./assets/reseñas.html">Leer reseñas</a>
+          </div>
+          <div class="container__seriesMovies__movieInfo">
+            <img class="container__seriesMovies__favoriteButton" src="/img/banderin.png" alt="Boton agregar">
+            <img class="container__seriesMovies__favoriteButton hover" src="/img/banderin-hover.png" alt="Boton agregar">
+            <img class="container__seriesMovies__moviePoster img-fluid" src="img/poster-oppenheimer.jpg" alt="Poster Oppenheimer">
+            <p class="mt-xl-3 text-wrap container__seriesMovies__movieDescription">En tiempos de guerra, el brillante físico estadounidense Julius Robert Oppenheimer (Cillian Murphy), al frente del "Proyecto Manhattan", lidera los ensayos nucleares para construir la bomba atómica para su país. Oppenheimer comienza a hacerse preguntas.</p>
+            <a class="container__seriesMovies__openReviews btn-light text-dark me-2" href="./assets/reseñas.html">Leer reseñas</a>
+          </div>
+          <div class="container__seriesMovies__movieInfo">
+            <img class="container__seriesMovies__favoriteButton" src="/img/banderin.png" alt="Boton agregar">
+            <img class="container__seriesMovies__favoriteButton hover" src="/img/banderin-hover.png" alt="Boton agregar">
+            <img class="container__seriesMovies__moviePoster img-fluid" src="img/poster-harry-potter.jpg" alt="Poster Harry Potter">
+            <p class="mt-xl-3 text-wrap container__seriesMovies__movieDescription">El día de su cumpleaños, Harry Potter descubre que es hijo de dos conocidos hechiceros, de los que ha heredado poderes mágicos. Debe asistir a una famosa escuela de magia y hechicería, donde entabla una amistad con dos jóvenes que se convertirán en sus compañeros.</p>
+            <a class="container__seriesMovies__openReviews btn-light text-dark me-2" href="./assets/reseñas.html">Leer reseñas</a>
+          </div>    
+        </div>
+      </section> 
+      <section class="container__seriesMovies mobile">
+        <div class="container__seriesMovies__firstRow">
+          <div class="container__seriesMovies__movieInfo">
+            <img class="container__seriesMovies__favoriteButtonMobile" src="/img/banderin.png" alt="Boton agregar">
+            <img class="container__seriesMovies__moviePoster img-fluid" src="img/poster-interestellar.jpg" alt="Poster Interestellar">
+            <p class="mt-xl-3 text-wrap container__seriesMovies__movieDescription">Interestellar - Christopher Nolan</p>
+            <a class="container__seriesMovies__openReviews btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
+          </div>
+          <div class="container__seriesMovies__movieInfo">
+            <img class="container__seriesMovies__favoriteButtonMobile" src="/img/banderin.png" alt="Boton agregar">
+            <img class="container__seriesMovies__moviePoster img-fluid" src="img/poster-oppenheimer.jpg" alt="Poster Openhaimer">
+            <p class="mt-xl-3 text-wrap container__seriesMovies__movieDescription">Oppenheimer - Christopher Nolan</p>
+            <a class="container__seriesMovies__openReviews btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
+          </div>
+        </div>
+        <div class="container__seriesMovies__firstRow">
+          <div class="container__seriesMovies__movieInfo">
+            <img class="container__seriesMovies__favoriteButtonMobile" src="/img/banderin.png" alt="Boton agregar">
+            <img class="container__seriesMovies__moviePoster img-fluid" src="img/poster-harry-potter.jpg" alt="Poster Harry Potter">
+            <p class="mt-xl-3 text-wrap container__seriesMovies__movieDescription">Harry Potter - J. K. Rowling</p>
+            <a class="container__seriesMovies__openReviews btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
+          </div>
+          <div class="container__seriesMovies__movieInfo">
+            <img class="container__seriesMovies__favoriteButtonMobile" src="/img/banderin.png" alt="Boton agregar">
+            <img class="container__seriesMovies__moviePoster img-fluid" src="img/poster-barbie.jpg" alt="Poster Barbie">
+            <p class="mt-xl-3 text-wrap container__seriesMovies__movieDescription">Barbie - Greta Gerwig</p>
+            <a class="container__seriesMovies__openReviews btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
+          </div>
+        </div>
+        <div class="container__seriesMovies__firstRow">
+          <div class="container__seriesMovies__movieInfo">
+            <img class="container__seriesMovies__favoriteButtonMobile" src="/img/banderin.png" alt="Boton agregar">
+            <img class="container__seriesMovies__moviePoster img-fluid" src="img/poster-oppenheimer.jpg" alt="Poster Openhaimer">
+            <p class="mt-xl-3 text-wrap container__seriesMovies__movieDescription">Oppenheimer - Christopher Nolan</p>
+            <a class="container__seriesMovies__openReviews btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
+          </div>
+          <div class="container__seriesMovies__movieInfo">
+            <img class="container__seriesMovies__favoriteButtonMobile" src="/img/banderin.png" alt="Boton agregar">
+            <img class="container__seriesMovies__moviePoster img-fluid" src="img/poster-interestellar.jpg" alt="Poster Interestellar">
+            <p class="mt-xl-3 text-wrap container__seriesMovies__movieDescription">Interestellar - Christopher Nolan</p>
+            <a class="container__seriesMovies__openReviews btn-light text-dark" href="./assets/reseñas.html">Leer reseñas</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="signUp" id="formularioRegistro">
+      <div class="signUp__register">
+        <div class="signUp__register__content">
+          <h2 class="signUp__title">Registrate</h2>
+          <form action="" class="signUp__register__form">
+            <ul class="signUp__items">
+              <li class="signUp__item">
+                <label for="">Nombre</label>
+                <input class="signUp__input" type="text">
+              </li>
+              <li class="signUp__item">
+                <label for="">Apellido</label>
+                <input class="signUp__input" type="text">
+              </li>
+              <li class="signUp__item">
+                <label for="">Correo electronico</label>
+                <input class="registroInput signUp__input" type="email">
+              </li>
+              <li class="signUp__item">
+                <label for="">Contraseña</label>
+                <input class="signUp__input" type="password">
+              </li>
+              <div class="signUp__buttons">
+                <button type="button" class="signUp__cancelSuscription"><a href="">Cancelar</a></button>
+                <button type="button" class="signUp__suscription"><a  href="">Suscribite</a></button>
+              </div>
+            </ul>
+          </form>
+        </div>
+      </div> 
+      <div class="signUp__monologue">
+        <h2>¿Sos estudiante?</h2>
+        <p>Si sos estudiante registrate con tu certificado de alumno regular, obteniendo la posibilidad de subir tus propios
+          proyectos audiovisuales, generando una red de cineastas y oportunidades para el crecimiento 
+          profesional, ya que podras seguir a tus amigos y colegas.
+          Vas a poder comentar y opinar sobre los proyectos de otras personas.
+        <button type="button" class="signUp__suscription">
+          <a href="assets/estudiante.html">Suscribite como estudiante</a>
+        </button>
+      </div> 
+    </section>
+    <footer class="footer__background mt-5 py-5 my-0">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li>
+          <a href="#" class="nav-link px-2 footer__textColor">Aplicación mobile</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link px-2 footer__textColor">Facebook</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link px-2 footer__textColor">Instagram</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link px-2 footer__textColor">Twitter</a>
+        </li>
+      </ul>
+      <p class="text-center "> &copy; 2023 Company, Kiddow's design </p>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
   </body>
 </html>

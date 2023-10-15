@@ -1,50 +1,12 @@
-//mixins
-@mixin flexBox($display,$flexDirection,$alignItems,$justifyCoxntent){
-    display: $display;
-    flex-direction: $flexDirection;
-    align-items: $alignItems;
-    justify-content: $justifyCoxntent;
-}
-@mixin botones($color,$border,$radius,$padding,$width){
-    background-color: $color;
-    border: $border;
-    border-radius: $radius;
-    padding: $padding;
-    width: $width;
-}
-@mixin imagenes($height,$width,$margin,$padding){
-    height: $height;
-    width: $width;
-    margin: $margin;
-    padding: $padding;
-}
-@mixin margenes($top,$right,$bottom,$left){
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;
-}
-@mixin tamaño($height,$width){
-    height: $height;
-    width: $width;
-}
-@mixin margenPadding($margen,$padding){
-    margin: $margen;
-    padding: $padding;
-}
-
-
-section{
-    &.contenedorFormulario{
+main, section{
+    &.container__formlogIn{
         @include flexBox(flex,column ,center ,center );
         @include tamaño(fit-content,100%);
-        margin-bottom: 8em;
-        align-items: center;  
-        margin-bottom: 200px;
-            
+        margin-bottom: 8em; 
+        margin-bottom: 200px;    
     }
     form{
-        &.formulario{
+        &.container__form{
             @include flexBox(flex,column ,center ,start );
             @include tamaño(fit-content,40%);
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
@@ -56,38 +18,40 @@ section{
                     padding: 1rem;
             }    
         }
-        .labelEInput{
+        .container__form__label{
             @include tamaño(3em,100%);
             margin-bottom: 5px;
             display: flex;
             align-items: end;
         }
-        .soloInput{
+        input{
+            @extend .container__form__label;
             padding: 10px;
-            border-radius: 5px;
-        } 
+            border-radius: 5px; 
+        }
+         
     }
     button{
-        &.iniciarSesion{
+        &.container__formlogIn__buttonLogIn {
             @include botones(map-get($map: $paleta, $key: colorPrimario ),none, 0.3em ,0.625em ,100% );
             padding: 0.625em;
             margin-top: 2em;
             color: map-get($map: $paleta, $key: 'white' );
         }
-        &.registrarme{
+        &.container__formlogIn__signUp{
             @include botones(map-get($paleta, $key:'white'),solid black 0.1em, 0.3em ,0.625em ,100% );
             background-color: map-get($map: $paleta, $key: 'white' );
             margin-top: 2em;
         }
     }
-    .check{
+    .container__formlogIn__check{
         @include flexBox(flex,auto ,start ,start );
         margin-top: 2em;
         width: 100%;
     } 
 }
 p{
-    &.noRegistrado{ 
+    &.container__formlogIn__notRegistered{ 
         border-top: black 1px solid;
         width: 100%;
         text-align: center;
@@ -95,7 +59,7 @@ p{
     } 
 }
 div{
-    &.logoRegistro{
+    &.container__formlogIn__logo{
         @include flexBox(flex,auto ,center ,center );
     }
 }

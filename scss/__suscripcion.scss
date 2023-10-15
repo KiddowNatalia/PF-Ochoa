@@ -1,0 +1,90 @@
+form{
+    .signUp__items{
+        width: 100%;
+        @media only screen and (min-width: 0px) and (max-width: 720px){
+            padding: 0;
+            }
+        }
+    &.signUp__register__form{
+        @include flexBox(flex,column ,center ,center);
+        width: 100%
+    }
+    .signUp__item{
+        @include flexBox(flex,column ,start ,center);
+        text-decoration: none;
+        width: 100%;
+        @media only screen and (min-width: 0px) and (max-width: 720px){
+            width: 100%;
+        }
+    }
+}
+section {
+    &.signUp{
+        @include flexBox(flex,row ,start,space-between);
+    width: 90%;
+    }
+    
+    div{
+        .signUp__title{
+            padding-left: 5%;
+            padding-bottom: 2%;
+            @media only screen and (min-width: 0px) and (max-width: 720px){
+                padding: 0;
+                text-align: center;
+            }
+        }
+        &.signUp__register__content{
+        @include flexBox(flex,column ,start,center);
+        width: 90%;
+        margin-top: 96px;
+        padding-left: 10%;
+        @media only screen and (min-width: 0px) and (max-width: 720px){
+            padding-left: 10%;
+            width: 100%;
+            @include flexBox(flex,column ,center,center);
+            }
+        }
+        .signUp__input{
+            width: 100%;
+        }
+        .signUp__cancelSuscription{
+            @include botones(inherit,solid 1px black,6px,8px,auto);
+            @include margenes(7px,0px,5px,0px);
+            display: block;
+            width: fit-content;
+            background-color: map-get($map: $paleta, $key:'white');
+            margin-right: 8px;
+            margin-top: 16px
+        }   
+        .signUp__suscription{
+            @include botones(inherit,inherit,6px,8px,auto);
+            @include margenes(7px,0px,5px,0px);
+            display: block;
+            width: fit-content;
+            background-color: map-get($map: $paleta, $key:colorSecundario);
+            margin-top: 16px;
+            &:hover{
+                background-color: map-get($map: $paleta, $key: hoverBotones);
+                transition: all 0.5s;
+            }
+        }
+        .signUp__buttons{
+            @include flexBox(flex,row ,start,start);
+        }
+        &.signUp__register{
+            @include flexBox(flex,row ,start,center);
+                width: 50%;
+                @media only screen and (min-width: 0px) and (max-width: 720px){
+                width: 100%;
+            }
+        }
+    }
+    .signUp__monologue{
+        width: 50%;
+        padding-top: 96px;
+        padding-right: 0%;
+        @media only screen and (min-width: 0px) and (max-width: 720px){
+            display: none;
+        }
+    }
+}

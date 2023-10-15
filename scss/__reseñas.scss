@@ -1,95 +1,250 @@
-//mixins
-@mixin flexBox($display,$flexDirection,$alignItems,$justifyCoxntent){
-    display: $display;
-    flex-direction: $flexDirection;
-    align-items: $alignItems;
-    justify-content: $justifyCoxntent;
-}
-@mixin botones($color,$border,$radius,$padding,$width){
-    background-color: $color;
-    border: $border;
-    border-radius: $radius;
-    padding: $padding;
-    width: $width;
-}
-@mixin imagenes($height,$width,$margin,$padding){
-    height: $height;
-    width: $width;
-    margin: $margin;
-    padding: $padding;
-}
-@mixin margenes($top,$right,$bottom,$left){
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;
-}
-@mixin tamaño($height,$width){
-    height: $height;
-    width: $width;
-}
-@mixin margenPadding($margen,$padding){
-    margin: $margen;
-    padding: $padding;
-}
-.reseñasTitulo{
+.reviews__title{
     @include flexBox(flex,column,center,center);
         width: 100%;
         text-align: center;
-        margin-bottom: 48px;
+        margin-bottom: 24px;
+        margin-top: 24px;
         color: map-get($map: $paleta, $key: 'black');
         @media only screen and (min-width: 0px) and (max-width: 720px){
             margin-top: 16px;
             margin-bottom: 16px;
             }
 }
-div{
-    &.contenedorBanner{
-        @include tamaño(fit-content,100%);
-        @include flexBox(flex, row ,center ,center);
-    }
-    &.reseñas{
-        @include tamaño(fit-content,100%);
-    @include flexBox(flex, row ,center ,center );
-    }
-    .bannerPelicula{
-        @include imagenes(fit-content,80%,48px,0);
-        @media only screen and (min-width: 0px) and (max-width: 720px){
-        @include imagenes(fit-content,100%,auto,0);
+.reviews__cast__titleMobile{
+        display: none;
+        @media only screen and (min-width: 0px) and (max-width: 1200px){
+            display: block;
+            margin-left: 1rem;
+            @include flexBox(flex,column,start,center);
+            width: 100%;
+            text-align: center;
+            color: map-get($map: $paleta, $key: 'black');
+            }
+}
+main{
+    height: 100%;
+    &.reviews__cast__container{
+        @include flexBox(flex, row ,start ,space-between);
+        width: 100%;
+        margin-top: 180px;
+        @media only screen and (min-width: 0px) and (max-width: 1200px){
+            @include flexBox(flex,column,start,center);
+            margin-top: 0px;
         }
     }
-    &.contenedorReseñas{
-        @include flexBox(flex,column,center,center);
-        @include tamaño(fit-content,90%);
+}
+div{
+    &.contenedorBanner{
+        background-image: url(../img/BannerOpenheimer.webp);
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+        @media only screen and (min-width: 0px) and (max-width: 768px){
+            @include tamaño(150px,100%);
+           
+            }
+        @media only screen and (min-width: 768px) and (max-width: 1200px){
+            @include tamaño(300px,100%);
+            position: relative;
+            }
+    }
+    .cast__poster{
+        @include flexBox(flex, row,center,space-between);
+        padding-right: 1rem;
+        padding-top: 1rem;
+        height: 100%;
+        @media only screen and (min-width: 768px) and (max-width: 2000px){
+            @include flexBox(flex, row,start,space-between);
+            }
+    }
+    .cast__movieSynopsis{
+        width: 70%;
+        padding-left: 5rem;
+        @media only screen and (min-width:0px) and (max-width: 576px){
+           width: 100%;
+            @include flexBox(flex, column ,start,end);
+            }
+            @media only screen and (min-width: 0px) and (max-width: 1200px){
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+    }
+    .cast__posterMovie{
+        width: 20%;
+        margin-left: 1rem;
+        border: 3px solid black;
+        top: 30%;
+        @include flexBox(flex, column ,end,end);
+        @media only screen and (min-width: 1200px) and (max-width: 2000px){
+            @include tamaño(auto,20%);
+            @include flexBox(flex, column ,space-between,end);
+            position: absolute;
+            right: 5%;
+            top: 45%;
+            }
+        @media only screen and (min-width: 768px) and (max-width: 1200px){
+            @include tamaño(auto,20%);
+            @include flexBox(flex, column ,space-between,end);
+            position: absolute;
+            right: 5%;
+            top: 30%;
+            }
+            @media only screen and (min-width: 576px) and (max-width: 768px){
+                @include tamaño(auto,20%);
+                @include flexBox(flex, column ,space-between,end);
+                position: absolute;
+                right: 5%;
+                top: 23%;
+                }
+      
+    }
+    &.cast__movieInfo{
+        height: 100%;
+        padding-left: 1rem;
+        @include flexBox(flex, column,space-between,space-between);
+        @media only screen and (min-width: 1200px) and (max-width: 2000px){
+            padding-left: 5rem;
+            }
+    }
+    &.bannerDeOpen{
+        @include tamaño(100%,100%);
+        @include flexBox(flex, column ,space-between,end);
+    }
+    &.reviews{
+        @include tamaño(100%,80%);
+        @include flexBox(flex, column ,end ,start);
+        padding-right: 4rem;
+        @media only screen and (min-width: 0px) and (max-width: 1200px){
+            width: 100%;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            @include flexBox(flex, column ,start,start);
+        }
+    }
+    &.reviews__container{
+        @include flexBox(flex,column,space-between,space-between);
+        @include tamaño(100%,100%);
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
         padding: 1rem;
         background-color: map-get($map: $paleta, $key: colorPrimario);
         border-radius: 8px;
-    }
-    .fotoUsuario1{
-        @include imagenes(10%,3em, 0,0 );
+        @media only screen and (min-width: 0px) and (max-width: 1200px){
+            @include flexBox(flex, column ,start,start);
+            @include tamaño(34%,100%);
+            }
         
     }
-    .tuComentario{
-        @include tamaño(10%,100% );
+    .reviews__userPhoto{
+        @include imagenes(40%,6em, 0,0 );
+        @media only screen and (min-width: 0px) and (max-width: 1200px){
+        @include tamaño(40%, 40% );
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+    }
+    .reviews__uReview{
+        @include tamaño(10%,100%);
         margin-top: 48px;
         border-radius: 8px;
-        padding: 16px;
-        
+        padding: 1rem;
     }
-    .comentario{
+    .reviews__review{
         @include flexBox(flex,row,center,center);
         box-shadow: 0 8px 8px -6px rgba($color: #000000, $alpha: 0.3);
-        padding-top: 16px;
-        @media only screen and (min-width: 0px) and (max-width: 720px){
-            @include flexBox(flex,row,start,center);
-            }
+        margin-bottom: 1rem;
+        @media only screen and (min-width: 0px) and (max-width: 1200px){
+            padding-left: 1rem;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+        background-color: map-get($map: $paleta, $key: 'white' );
+        border-radius: 8px; 
     }
     .reseñasComentario{
-        color: map-get($map: $paleta, $key: 'white');
+        color: map-get($map: $paleta, $key: 'black');
+        background-color: map-get($map: $paleta, $key: 'white' );
+        padding: 1rem;
+        margin: 0;
+        border-radius: 8px; 
+        @media only screen and (min-width: 0px) and (max-width: 1200px){
+            padding-right: 1rem;
+            padding-left: 1rem;
+            @include tamaño(100%,100%);
+            height: fit-content;
+        }
     }
-    .enviar1{
+    .reviews__container_sendReview{
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+    .reviews__sendReview{
         @include botones(map-get($map: $paleta, $key: colorSecundario),0px ,8px ,8px ,30% );
-        margin-top: 48px;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    &.reviews__cast__title{
+        margin-top: 1rem;
+        margin-left: 1rem;
+        @media only screen and (min-width: 0px) and (max-width: 1200px){
+            display: none;
+        }
+
+    }
+    .reviews__cast{
+        width: 12rem;
+        height: 16rem;
+        margin-top: 4rem;
+        @include flexBox(flex,column,center,center);
+        @media only screen and (min-width: 0px) and (max-width: 1200px){
+            @include flexBox(flex,column,center,center);
+            width: 8rem;
+            height: 8rem;
+            flex-shrink: 0;
+            background-size: cover;
+        }
+    }
+    img{
+        &.reviews__cast__cillianMurphy{
+            @include flexBox(flex,column,center,center);
+            @include imagenes(100%,100%,0 ,0 );
+            border-radius: 8px;
+            @media only screen and (min-width: 0px) and (max-width: 1200px){
+               display: none;
+            }
+        }  
+    }
+    .reviews__cast__characterMobile{
+        display: none;
+        @media only screen and (min-width: 0px) and (max-width: 1200px){
+            display: block;
+            width: 6rem;
+            height: 6rem;
+         }
+    }
+    &.reviews__cast__characters{
+        @include flexBox(flex,column,center,end);
+        width: 100%;
+        @media only screen and (min-width: 0px) and (max-width: 1200px){
+            @include flexBox(flex,row,end,space-between);
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+             margin-bottom: 1rem;
+        }
+    }
+    &.cast{
+        padding-left: 2rem;
+        width: 20%;
+        @include flexBox(flex,column,center,center);
+        @media only screen and (min-width: 0px) and (max-width: 1200px){
+            @include flexBox(flex,column,end,end);
+            @include tamaño(auto,100%);
+            width: 100%;
+            height: auto;
+            margin-top: 0rem;
+            overflow: hidden;
+            overflow-x: scroll; 
+            padding-left: 1rem;
+        }
     }
 }

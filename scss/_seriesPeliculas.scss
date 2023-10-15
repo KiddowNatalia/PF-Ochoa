@@ -1,72 +1,28 @@
-
-//ACA
-@mixin flexBox($display,$flexDirection,$alignItems,$justifyCoxntent){
-    display: $display;
-    flex-direction: $flexDirection;
-    align-items: $alignItems;
-    justify-content: $justifyCoxntent;
-}
-@mixin botones($color,$border,$radius,$padding,$width){
-    background-color: $color;
-    border: $border;
-    border-radius: $radius;
-    padding: $padding;
-    width: $width;
-}
-@mixin imagenes($height,$width,$margin,$padding){
-    height: $height;
-    width: $width;
-    margin: $margin;
-    padding: $padding;
-}
-@mixin margenes($top,$right,$bottom,$left){
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;
-}
-@mixin tamaño($height,$width){
-    height: $height;
-    width: $width;
-}
-@mixin margenPadding($margen,$padding){
-    margin: $margen;
-    padding: $padding;
-}
-
 a{
     text-decoration: none;
 }
-section{
-    &.contenedorPostersDePeliculas{
-        @include flexBox(flex,column ,space-between ,space-around );
-        width: 100vw;
-        height: 100%;
-    }
-    div{
-        &.position{
-            position: relative;
-        } 
-        &.position2{
-            position: relative;
-        } 
-        &.primerFilaPosters, &.tercerFilaPosters{
-            @include flexBox(flex,row ,none ,center );  
-        }
-        &.posterPelicula{
-            @include flexBox(flex,column,center,space-around);
-            width: 20.5%;
-            text-align: center;
-            height: 100%;
+main {
+    section{
+        &.container__seriesMovies{
+            @include flexBox(flex,column ,space-between ,space-around );
+            @include tamaño(100%,100%);
             @media (min-width:0px) and (max-width:768px) {
-                &.posterPelicula{
-                    width: 35%;
-                }
-            }
+                margin: 0;
         }
-        &.segundaFilaPosters{
-            @include flexBox(flex,row ,none ,center);
-            
+        }
+    div{
+        &.container__seriesMovies__firstRow{
+            @include flexBox(flex,row ,none ,center );
+            width: 100%;  
+        }
+        &.container__seriesMovies__movieInfo{
+            @include flexBox(flex,column,center,space-around);
+            @include tamaño(100%,20.5%);
+            text-align: center;
+            position: relative;
+            @media (min-width:0px) and (max-width:768px) {
+                    width: 35%;
+            }
         }        
         }
         &.mobile{
@@ -79,28 +35,25 @@ section{
             &.desktop{
                 display: none;
             }
-        } 
+        }
+    }     
 } 
-//aca no esta el problema
 img{
-    &.posters{
-        @include tamaño(62.8%,100%);
+    &.container__seriesMovies__moviePoster{
+        @include tamaño(75%,100%);
         padding: 10px;
         @media (min-width:0px) and (max-width:768px) {
-            &.posters{
-                @include tamaño(62.8%,100%);
-                
-            }
+            @include tamaño(62.8%,100%);
         }
     }
-    &.botonFavoritos{
+    &.container__seriesMovies__favoriteButtonMobile{
         @include tamaño(15%,20%);
         position: absolute;
         top: 0;
         left: 0%;
         margin: 10px;
     }
-    &.botonFavoritos2{
+    &.container__seriesMovies__favoriteButton{
         @include tamaño(4em,2.7em);
         position: absolute;
         top: 0%;
@@ -108,7 +61,7 @@ img{
         left: 0;
         cursor: pointer;
         //ESTE CODIGO VALE ORO
-        &.botonFavoritos2:hover{
+        &.container__seriesMovies__favoriteButton:hover{
             display: block;
             opacity: 1;
             transition: opacity .2s;
@@ -134,7 +87,7 @@ img{
     }
 }
 p{
-    &.descripcionPeli{
+    &.container__seriesMovies__movieDescription{
         padding-left: 30px;
         padding-right: 30px;
         
@@ -145,7 +98,7 @@ p{
         }
     }
 }
-.verReseñas{
+.container__seriesMovies__openReviews{
     @include botones(map-get($map:$paleta, $key: colorSecundario),none,5px,8px,80%);
     &:hover{
        background-color: map-get($map: $paleta, $key: hoverBotones);

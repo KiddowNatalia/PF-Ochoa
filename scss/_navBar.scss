@@ -12,14 +12,14 @@ button {
         text-decoration: none;
         color: black;
     }
-    &.miBtn{
+    &.navBar__button__logIn{
         @include botones(map-get($map:$paleta, $key: colorSecundario),none,5px,8px,auto);
         &:hover{
            background-color: map-get($map: $paleta, $key: hoverBotones);
            transition: all 0.5s;
         }
     }
-    &.btn{
+    &.navBar__button__signUp{
         @include botones(map-get($map:$paleta, $key: 'white'),none,5px,8px,auto);
         &:hover{
             background-color: map-get($map: $paleta, $key: grey);
@@ -27,64 +27,78 @@ button {
          }
         } 
         @media only screen and (max-width: 991px){ 
-            &.btn{
+            &.navBar__button__logIn{
              @include botones(inherit,inherit,2px,0px,auto);
-             @include margenes(2px,0px,5px,2px);
+             padding-top: 5px;
+             padding-bottom: 5px;
             display: block;
             width: fit-content;
             }
-            &.miBtn{
-            @include botones(inherit,inherit,2px,0px,auto);
-            @include margenes(7px,0px,5px,0px);
+            &.navBar__button__signUp{
+            @include botones(inherit,inherit,8px,0px,auto);
+            padding-top: 5px;
+            padding-bottom: 5px;
             display: block;
-        }   width: fit-content;
+           width: fit-content;
+        } 
     }
 }
-.estudiante{
+div{
+    .nav__item{
+        text-decoration: none;
+        color: black;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size 0.3s;
+    }
+    .nav__item:hover{
+        color: white;
+        background-size: 100% 2px;
+    } 
+    .navBar__graduationCap__dropDown{
         display: none;
         @media only screen and (max-width: 991px){ 
-        display: block;
-        img{
-            &.birreteDesplegable{
-                width: 30px;
+        display: inline;
+        width: 30px;
+        color: black;
+        }
+    }
+    img{
+        &.navBar__bigLogo{
+            @include imagenes(38px,auto,0px ,0px);
+                cursor: pointer;
             }
-        }
-    }
-}
-img{
-    &.image1{
-        @include imagenes(38px,auto,0px ,0px);
-            cursor: pointer;
-        }
-    &.image2{
-        display: none;
-    }
-    @media only screen and (min-width: 0px) and (max-width: 767px){
-        &.image2{
-            display: block;
-            width: 38px;
-            cursor: pointer;
-        }
-        &.image1{
+        &.navBar__miniLogo{
             display: none;
         }
-    }
-
-    &.birrete{
-        @include botones(none,none ,5px ,0px,35px);
-        cursor: pointer;
-        &:hover{
-            transform: scale(1.1);
-            background-color: map-get($map: $paleta, $key: colorSecundario );
-            transition: all 0.5s;
-        }
-        @media only screen and (max-width: 991px){
-            &.birrete{
+        @media only screen and (min-width: 0px) and (max-width: 767px){
+            &.navBar__miniLogo{
+                display: block;
+                width: 38px;
+                cursor: pointer;
+            }
+            &.navBar__bigLogo{
                 display: none;
             }
+        }
+        &.navBar__graduationCap{
+            @include botones(none,none ,5px ,0px,35px);
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+                background-color: map-get($map: $paleta, $key: colorSecundario );
+                transition: all 0.5s;
+            }
+            @media only screen and (max-width: 991px){
+                &.navBar__graduationCap{
+                    display: none;
+                }
+            } 
         } 
-    } 
-}     
+    }
+}
 .navbar-collapse{
     flex-grow: inherit;
 }

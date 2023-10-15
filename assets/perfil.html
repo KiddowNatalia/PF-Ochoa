@@ -14,90 +14,216 @@
     <link rel="stylesheet" href="../css/main.css"/>
   </head>
   <body class="row grid-contenedor-padre">
-    
-<!-- NAV BAR -->
-<nav class="navbar navbar-expand-lg background" data-bs-theme="light">
-    <div class="container-fluid"> 
-      <form class="d-flex  widthForm" role="search">
-        <a href="../index.html"><img class="me-2 image1" src="../img/logo-cinefilos-grande.png" alt="logo De Cinefilos Comentan"/></a>
-        <a href="../index.html"><img src="../img/logo-cinefilos-mini.png" class="image2 me-2"/></a>
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-       </form>
-      <div class="navbar-collapse collapse justify-content-end align-content-end" id="navbarColor03">
-        <a href="../assets/estudiante.html"><img id="birrete" class="birrete" src="../img/birrete-estudiantes.png" alt="Birrete estudiantes" ></a>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 displayUl">
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="#seriesYPeliculas">Series</a>
+    <header>
+      <nav class="navbar navbar-expand-lg background" data-bs-theme="light">
+        <div class="container-fluid"> 
+          <form class="d-flex  widthForm" role="search">
+            <a href="../index.html"><img class="me-2 navBar__bigLogo" src="../img/logo-cinefilos-grande.png" alt="Logo de Cinefilos Comentan"/></a>
+            <a href="../index.html"><img src="../img/logo-cinefilos-mini.png" class="navBar__miniLogo me-2"/></a>
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </form>
+          <div class="navbar-collapse collapse justify-content-end align-content-end" id="navbarColor03" >
+            <a href="assets/estudiante.html"><img id="Graduation cap" class="navBar__graduationCap" src="../img/birrete-estudiantes.png" alt="Graduation cap" ></a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 displayUl">
+              <li class="navBar__item">
+                <a class="nav-link nav__item" aria-current="page" href="../index.html">Inicio</a>
+              </li>
+              <li class="navBar__item">
+                <a class="nav-link nav__item" href="../index.html">Series</a>
+              </li>
+              <li class="navBar__item nav__item">
+                <a class="nav-link nav__item" href="../index.html">Películas</a>
+              </li>
+              <li class="navBar__item nav__item">
+                <a class="nav-link nav__item" href="../assets/perfil.html">Perfil</a>
+              </li>
+              <li class="navBar__item">
+                <a class="nav__BarLink navBar__graduationCap__dropDown" href="#">¿Sos estudiante?
+                  <img class="navBar__graduationCap__dropDown" src="img/birrete-estudiantes.png" alt="Birrete estudiantes">
+                </a>
+              </li>
+              <button type="button" class="navBar__button__logIn btn btn-light text-dark me-2"><a href="../assets/iniciar-sesion.html">Ingresar</a></button>
+              <button type="button" class=" navBar__button__signUp  btn-light text-dark me-2"><a  href="../index.html">Suscribite</a></button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- <nav class="subMenu">
+        <ul class="navbar-nav subMenu__items">
+          <li class="subMenu__items">
+            <a class="nav-link" href="../index.html">Series</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#seriesYPeliculas">Películas</a>
+          <li class="subMenu__items">
+            <a class="nav-link" href="../index.html">Películas</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Perfil</a>
+          <li class="subMenu__items">
+            <a class="nav-link" href="../index.html">Inicio</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link estudiante" href="#">¿Sos estudiante?
-              <img class="birreteDesplegable" src="../img/birrete-estudiantes.png" alt="Birrete estudiantes">
-            </a>
+          <li class="subMenu__items">
+            <a class="nav-link" href="../assets/perfil.html">Perfil</a>
           </li>
-          <button type="button" class=" btn btn-light text-dark me-2"><a href="../assets/iniciar-sesion.html">Ingresar</a></button>
-          <button type="button" class=" miBtn btn-light text-dark me-2"><a  href="../assets/suscripcion.html">Suscribite</a></button>
+          <li class="subMenu__items">
+            <a class="nav-link" href="../index.html">Amigos</a>
+          </li>
         </ul>
+      </nav> -->
+    </header>
 
+    <div class="card__profile mobile">
+      <button class="card__profile__buttonEdit">Editar perfil</button>
+      <div class="card__profile__edition">
+        <div class="card__profile__content">
+          <img class="card__profile__pic" src="../img/kurapika.png" alt= "Foto de perfil del usuario"/>
+          <p class="mobile">Kurapika</p>
+        </div>
+        <div class="card__profileInfoMobile">
+          <div>
+            <p>Amigos</p>
+            <p class="card__profileMobile__number">5</p>
+          </div>
+          <img src="../img/iconos/Line 51.svg" alt="">
+          <div>
+            <p>Seguidores</p>
+            <p class="card__profileMobile__number">5</p>
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
-<!-- NAV BAR -->
-<!-- SUB MENU MOBILE -->
-    <nav class="subMenu">
-      <ul class="navbar-nav subMenuItems">
-        <li class="subMenuItems">
-          <a class="nav-link" href="#seriesYPeliculas">Series</a>
-        </li>
-        <li class="subMenuItems">
-          <a class="nav-link" href="#seriesYPeliculas">Películas</a>
-        </li>
-        <li class="subMenuItems">
-          <a class="nav-link disabled" href="#">Inicio</a>
-        </li>
-        <li class="subMenuItems disabled">
-          <a class="nav-link disabled" href="#">Perfil</a>
-        </li>
-        <li class="subMenuItems">
-          <a class="nav-link disabled" href="#">Amigos</a>
-        </li>
-    </nav>
-     <!-- SUB MENU MOBILE -->
+    <main class="panel__profileContent">
+      <div class="panel__left">
+        <ul class="panel__left__items">
+          <div class="panel__left__itemContainer">
+            <img class="panel__left__icon" src="../img/iconos/friends.svg" alt= "Foto de perfil del usuario"/>
+            <li>
+              <a class="panel__left__item" href="">
+                Amigos
+              </a>
+            </li>
+          </div>
+          <div class="panel__left__itemContainer">
+            <img class="panel__left__icon" src="../img/iconos/Favorite.svg" alt= "Foto de perfil del usuario"/>
+            <li>
+              <a class="panel__left__item" href="">
+                Favoritos
+              </a>
+            </li>
+          </div>
+          <div class="panel__left__itemContainer">
+            <img class="panel__left__icon" src="../img/iconos/Agregar.svg" alt= "Foto de perfil del usuario"/>
+            <li>
+              <a class="panel__left__item" href="">
+                Seguidores 
+              </a>
+            </li>
+          </div>
+          <div class="panel__left__itemContainer">
+            <img class="panel__left__icon" src="../img/iconos/Lista.png" alt= "Foto de perfil del usuario"/>
+            <li>
+              <a class="panel__left__item" href="">
+               Listas
+              </a>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <div class="card__profileContent">
+        <div class="card__profile__edition">
+          <div class="card__profileContent__record">
+           <p>Todavia no tienes contenido en tu perfil.</p>
+          </div>
+        </div>
+      </div>
+      <section class="mobile">
+        <div class="panel__left__itemContainerMobile">
+            <div class="panel__left__namingIconMobile">
+              <img class="panel__left__iconMobile" src="../img/iconos/Check red.svg" alt= "Foto de perfil del usuario"/>
+              <li>
+                <a class="panel__left__namingMobile" href="">
+                  Series y peliculas vistas
+                </a>
+              </li>
+            </div>
+            <img class="panel__left__iconMobile" src="../img/iconos/arrow-right.png" alt= "Foto de perfil del usuario"/>
+          </div>
+          <div class="panel__left__itemContainerMobile">
+            <div class="panel__left__namingIconMobile">
+              <img class="panel__left__iconMobile" src="../img/iconos/Favorite Red.svg" alt= "Foto de perfil del usuario"/>
+              <li>
+                <a class="panel__left__namingMobile" href="">
+                  Series y peliculas favoritas
+                </a>
+              </li>
+            </div>  
+            <img class="panel__left__iconMobile" src="../img/iconos/arrow-right.png" alt= "Foto de perfil del usuario"/>
+          </div>
+            <div class="panel__left__itemContainerMobile">
+              <div class="panel__left__namingIconMobile">
+                <img class="panel__left__iconMobile" src="../img/iconos/Listas red.svg" alt= "Foto de perfil del usuario"/>
+                <li>
+                  <a class="panel__left__namingMobile" href="">
+                    Series y peliculas pendientes
+                  </a>
+                </li>
+              </div>
+              <img class="panel__left__iconMobile" src="../img/iconos/arrow-right.png" alt= "Foto de perfil del usuario"/>
+            </div>
+            <div class="panel__left__separator">
+              <img src="../img/iconos/Separador horizontal.svg" alt="">
+            </div>
+            <div class="panel__left__itemContainerMobile">
+              <div class="panel__left__namingIconMobile">
+                <img class="panel__left__iconMobile" src="../img/iconos/Corazon red.svg" alt= "Foto de perfil del usuario"/>
+                <li>
+                  <a class="panel__left__namingMobile" href="">
+                    Mis me gusta 
+                  </a>
+                </li>
+              </div>
+              <img class="panel__left__iconMobile" src="../img/iconos/arrow-right.png" alt= "Foto de perfil del usuario"/>
+            </div>
+            <div class="panel__left__itemContainerMobile">
+              <div class="panel__left__namingIconMobile">
+                <img class="panel__left__iconMobile" src="../img/iconos/Comentarios red.svg" alt= "Foto de perfil del usuario"/>
+                <li>
+                  <a class="panel__left__namingMobile" href="">
+                    Mis reseñas
+                  </a>
+                </li>
+              </div>
+              <img class="panel__left__iconMobile" src="../img/iconos/arrow-right.png" alt= "Foto de perfil del usuario"/>
+            </div>
+          </ul>
+        </div>
+      </section>
+    </main>
+    
+    
+    
 
-<!-- CARD PERFIL -->
-<div class="cardPerfil">
-  <div class="profileEdition">
-    <div class="profileContent">
-    <img class="fotoPerfil" src="../img/kurapika.png" alt= "Foto de perfil del usuario"/>
-  </div>
-  </div>
-</div>
-<!-- CARD PERFIL -->
-
-     <!-- FOOTER -->
-<footer class="backgroundFooter mt-5 py-5 my-0">
-<ul class="nav justify-content-center border-bottom pb-3 mb-3">
-  <li class="nav-item tex"><a href="#" class="nav-link px-2 colorText">Aplicación mobile</a></li>
-  <li class="nav-item"><a href="#" class="nav-link px-2 colorText">Facebook</a></li>
-  <li class="nav-item"><a href="#" class="nav-link px-2 colorText">Instagram</a></li>
-  <li class="nav-item"><a href="#" class="nav-link px-2 colorText">Twitter</a></li>
-</ul>
-<p class="text-center "> &copy; 2023 Company, Kiddow's design </p>
-</footer>
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-  crossorigin="anonymous"
-></script>
-</body>
+    <footer class="footer__background mt-5 py-5 my-0">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li>
+          <a href="#" class="nav-link px-2 footer__textColor">Aplicación mobile</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link px-2 footer__textColor">Facebook</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link px-2 footer__textColor">Instagram</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link px-2 footer__textColor">Twitter</a>
+        </li>
+      </ul>
+      <p class="text-center "> &copy; 2023 Company, Kiddow's design</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous">
+    </script>
+  </body>
 </html>

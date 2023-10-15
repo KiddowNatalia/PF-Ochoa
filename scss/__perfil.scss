@@ -35,18 +35,19 @@
 
 
     img{
-        &.fotoPerfil{
+        &.card__profile__pic{
             width: 100%;
             height: 40%;
             filter: drop-shadow(0px 4px 15px #CA4A65);
+            margin-bottom: 1rem;
         }
     }
 
-.cardPerfil{
+.card__profile{
     @include flexBox(flex,row ,center ,center );
     @include tamaño(24rem, calc(100vw - 4rem));
     position: relative;
-        border: 1px solid black;
+        background-image: url(../img/studio\ banner.png);
         border-radius: 8px;
         fill: #FFF;
         margin-left: 2rem;
@@ -55,43 +56,174 @@
         @media only screen and (min-width: 0px) and (max-width: 768px){
             @include tamaño(15rem, calc(100vw - 4rem));
             margin-top: 6rem;
+            background-image: none;
+            background-color: map-get($map: $paleta, $key: 'white' );
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            border: none;
         }
     }
-.profileEdition{
+.card__profile__edition{
      @include flexBox(flex, row,end, center);
-     height: 100%;
-     width: 100%;
+     @include tamaño(100%,100% );
      position: relative;
+     
 }
-.profileContent{
+.card__profile__content{
     height: 100%;
-    @include flexBox(flex, row,center, center);
+    @include flexBox(flex,column ,center ,center );
     position: absolute;
     top: 12rem;
     @media only screen and (min-width: 0px) and (max-width: 768px){
-        top: -7.5rem;
-    }
-
-  
+        top: -6.3rem;
+        @include flexBox(flex,column ,center ,center );
+    } 
 }
-nav{
-    &.subMenu{
-        background-color: map-get($map: $paleta, $key:colorPrimario );
-        @media only screen and (min-width: 991px) and (max-width: 2040px){
+.card__profile__buttonEdit{
+    position: absolute;
+    top: 22.7rem;
+    right: 1rem;
+    @include tamaño(2.5rem, 8rem);
+    border-radius: 8px;
+    display: inline;
+    border: none;
+    background-color: map-get($map: $paleta, $key: colorSecundario);
+    @media only screen and (min-width: 0px) and (max-width: 768px){
+        display: none;
+    } 
+}
+
+div{
+    &.panel__left{
+        @include flexBox(flex,row ,center ,center );
+        @include tamaño(fit-content, 15rem);
+        margin-top: 1rem;
+        border-radius: 8px;
+        @media only screen and (min-width: 0px) and (max-width: 768px){
             display: none;
         }
     }
     ul{
-        &.subMenuItems{
-            @include flexBox(flex, row , center ,space-around);
-            display: none;
-            width: calc(100vw - 1.1em);
-            padding-left: 8px;
-            padding-right: 8px;
-            color: black;
-            @media only screen and (min-width: 991px) and (max-width: 2040px){
-            display: block;
+        li{
+            .panel__left__item{
+                list-style-type: none;
+                color: black;
+                @include flexBox(flex,row ,center ,start);
+                background-image: linear-gradient(currentColor, currentColor);
+                background-position: 0% 100%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                transition: background-size 0.3s; 
+            }
+            .panel__left__item:hover{
+                color: map-get($map: $paleta, $key: 'colorPrimario');
+                background-size: 100% 2px;
+              
             }
         }
     }
+    .panel__left__itemContainer{
+        @include flexBox(flex,row ,center ,center);
+    }
+    .panel__left__items{
+        @include flexBox(flex,column ,start ,start); 
+        @include tamaño(100%,100% );
+        list-style-type: none;
+        color: black;
+        text-decoration: none;
+    }
+    .panel__left__icon{
+        @include tamaño(auto,56% );
+        }
+        &.card__profileInfoMobile{
+            @include flexBox(flex,row ,center ,space-between );
+            width: 100%;
+            padding: 2rem;
+            padding-top: 0;
+            text-align: center;
+            @media only screen and (min-width: 768px) and (max-width: 2000px){
+                display: none;
+                }
+        }
+        .panel__profileContent{
+            @include flexBox(flex,row ,start ,start);
+            padding-right: 2rem;
+            padding-top: 8rem;
+            @media only screen and (min-width: 0px) and (max-width: 768px){
+            padding-top: 0;
+            }
+        }
+        &.card__profileContent{
+            @include flexBox(flex,row ,center ,center );
+            @include tamaño(24rem, calc(100vw - 4rem));
+            background-color: map-get($map: $paleta, $key: 'colorPrimario' );
+            background-size: auto;
+            border-radius: 8px;
+            margin-left: 2rem;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+            color: map-get($map: $paleta, $key: 'white' );
+            @media only screen and (min-width: 0px) and (max-width: 768px){
+                @include tamaño(15rem, calc(100vw - 4rem));
+                margin-top: 6rem;
+                display: none;
+            }
+        }
+        &.card__profileContent__record{
+            @include flexBox(flex,row ,center ,center );
+            @include tamaño(92%, 100%);
+            margin: 1rem;
+            border-radius: 8px;
+            color: black;
+            background-color: map-get($map: $paleta, $key: 'white' );
+            @media only screen and (min-width: 0px) and (max-width: 768px){
+                display: none;
+            }
+        }
+        .card__profileMobile__number{
+            color: map-get($map: $paleta, $key: 'colorPrimario' );
+            margin-bottom: 0;
+        }
+    }
+main{
+    &.panel__profileContent{
+        @include flexBox(flex,row ,start ,start);
+        padding-right: 2rem;
+        padding-top: 8rem;
+        @media only screen and (min-width: 0px) and (max-width: 768px){
+        padding-top: 0;
+        }
+    }
+    
 }
+section{
+    &.mobile{
+        display: none;
+        @media only screen and (min-width: 0px) and (max-width: 768px){
+            display: block;
+            width: 100%;
+            margin-left: 2rem;
+            margin-top: 2rem;
+            @include flexBox(flex,column ,center ,center );
+        }
+    }
+    .panel__left__itemContainerMobile{
+        @include flexBox(flex,row ,center ,start );
+        list-style-type: none;
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        margin-right: 1rem;
+        }
+        .panel__left__namingMobile{
+            color: black;
+        }
+        .panel__left__namingIconMobile{
+            @include flexBox(flex,row ,center ,start );
+            width: 100%;
+        }
+        .panel__left__separator{
+            @include flexBox(flex,row ,center ,center );
+            margin-bottom: 1rem;
+        }
+        
+    }

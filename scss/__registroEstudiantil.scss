@@ -1,43 +1,7 @@
-
-//ACA
-@mixin flexBox($display,$flexDirection,$alignItems,$justifyCoxntent){
-    display: $display;
-    flex-direction: $flexDirection;
-    align-items: $alignItems;
-    justify-content: $justifyCoxntent;
-}
-@mixin botones($color,$border,$radius,$padding,$width){
-    background-color: $color;
-    border: $border;
-    border-radius: $radius;
-    padding: $padding;
-    width: $width;
-}
-@mixin imagenes($height,$width,$margin,$padding){
-    height: $height;
-    width: $width;
-    margin: $margin;
-    padding: $padding;
-}
-@mixin margenes($top,$right,$bottom,$left){
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;
-}
-@mixin tamaño($height,$width){
-    height: $height;
-    width: $width;
-}
-@mixin margenPadding($margen,$padding){
-    margin: $margen;
-    padding: $padding;
-}
-
 .adjuntarCertificado{
     @include botones(inherit,solid 1px,6px,8px,auto);
     margin-top: 48px;
     display: block;
-   width: 100%;
+    width: 100%;
 }
 
