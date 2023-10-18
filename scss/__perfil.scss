@@ -40,6 +40,12 @@
             height: 40%;
             filter: drop-shadow(0px 4px 15px #CA4A65);
             margin-bottom: 1rem;
+            
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+                transition: all 0.5s;
+            }
         }
     }
 

@@ -882,9 +882,6 @@ div.cast {
     padding-left: 1rem;
   }
 }
-div .reseñasComentario {
-  color: #fafafa;
-}
 div .enviar1 {
   background-color: #F8BF68;
   border: 0px;
@@ -1042,6 +1039,11 @@ img.card__profile__pic {
   height: 40%;
   filter: drop-shadow(0px 4px 15px #CA4A65);
   margin-bottom: 1rem;
+  cursor: pointer;
+}
+img.card__profile__pic:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 
 .card__profile {

@@ -254,9 +254,6 @@ div{
             padding-left: 1rem;
         }
     }
-    .reseñasComentario{
-        color: map-get($map: $paleta, $key: 'white');
-    }
     .enviar1{
         @include botones(map-get($map: $paleta, $key: colorSecundario),0px ,8px ,8px ,30% );
         margin-top: 48px;
