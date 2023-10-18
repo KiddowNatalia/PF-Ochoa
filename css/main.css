@@ -540,6 +540,16 @@ main.reviews__cast__container {
   }
 }
 
+.reseñasTitulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
 div.contenedorBanner {
   background-image: url(../img/BannerOpenheimer.webp);
   background-size: cover;
@@ -871,6 +881,17 @@ div.cast {
     overflow-x: scroll;
     padding-left: 1rem;
   }
+}
+div .reseñasComentario {
+  color: #fafafa;
+}
+div .enviar1 {
+  background-color: #F8BF68;
+  border: 0px;
+  border-radius: 8px;
+  padding: 8px;
+  width: 30%;
+  margin-top: 48px;
 }
 
 form .signUp__items {
