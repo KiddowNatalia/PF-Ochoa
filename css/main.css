@@ -894,4 +894,411 @@ div .enviar1 {
   margin-top: 48px;
 }
 
+form .signUp__items {
+  width: 100%;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  form .signUp__items {
+    padding: 0;
+  }
+}
+form.signUp__register__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+form .signUp__item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  form .signUp__item {
+    width: 100%;
+  }
+}
+
+section.signUp {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  width: 90%;
+}
+section div .signUp__title {
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  section div .signUp__title {
+    padding: 0;
+    text-align: center;
+  }
+}
+section div.signUp__register__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 90%;
+  margin-top: 96px;
+  padding-left: 10%;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  section div.signUp__register__content {
+    padding-left: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+section div .signUp__input {
+  width: 100%;
+}
+section div .signUp__cancelSuscription {
+  background-color: inherit;
+  border: solid 1px black;
+  border-radius: 6px;
+  padding: 8px;
+  width: auto;
+  top: 7px;
+  right: 0px;
+  bottom: 5px;
+  left: 0px;
+  display: block;
+  width: fit-content;
+  background-color: #fafafa;
+  margin-right: 8px;
+  margin-top: 16px;
+}
+section div .signUp__suscription {
+  background-color: inherit;
+  border: inherit;
+  border-radius: 6px;
+  padding: 8px;
+  width: auto;
+  top: 7px;
+  right: 0px;
+  bottom: 5px;
+  left: 0px;
+  display: block;
+  width: fit-content;
+  background-color: #F8BF68;
+  margin-top: 16px;
+}
+section div .signUp__suscription:hover {
+  background-color: #F7B147;
+  transition: all 0.5s;
+}
+section div .signUp__buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+}
+section div.signUp__register {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  width: 50%;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  section div.signUp__register {
+    width: 100%;
+  }
+}
+section .signUp__monologue {
+  width: 50%;
+  padding-top: 96px;
+  padding-right: 0%;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  section .signUp__monologue {
+    display: none;
+  }
+}
+
+.adjuntarCertificado {
+  background-color: inherit;
+  border: solid 1px;
+  border-radius: 6px;
+  padding: 8px;
+  width: auto;
+  margin-top: 48px;
+  display: block;
+  width: 100%;
+}
+
+img.card__profile__pic {
+  width: 100%;
+  height: 40%;
+  filter: drop-shadow(0px 4px 15px #CA4A65);
+  margin-bottom: 1rem;
+}
+
+.card__profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 24rem;
+  width: calc(100vw - 4rem);
+  position: relative;
+  background-image: url(../img/studio\ banner.png);
+  border-radius: 8px;
+  fill: #FFF;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  box-shadow: #CA4A65;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .card__profile {
+    height: 15rem;
+    width: calc(100vw - 4rem);
+    margin-top: 6rem;
+    background-image: none;
+    background-color: #fafafa;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border: none;
+  }
+}
+
+.card__profile__edition {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.card__profile__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 12rem;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .card__profile__content {
+    top: -6.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.card__profile__buttonEdit {
+  position: absolute;
+  top: 22.7rem;
+  right: 1rem;
+  height: 2.5rem;
+  width: 8rem;
+  border-radius: 8px;
+  display: inline;
+  border: none;
+  background-color: #F8BF68;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .card__profile__buttonEdit {
+    display: none;
+  }
+}
+
+div.panel__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 15rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  div.panel__left {
+    display: none;
+  }
+}
+div ul li .panel__left__item {
+  list-style-type: none;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+div ul li .panel__left__item:hover {
+  color: #CA4A65;
+  background-size: 100% 2px;
+}
+div .panel__left__itemContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+div .panel__left__items {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  height: 100%;
+  width: 100%;
+  list-style-type: none;
+  color: black;
+  text-decoration: none;
+}
+div .panel__left__icon {
+  height: auto;
+  width: 56%;
+}
+div.card__profileInfoMobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+  padding-top: 0;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) and (max-width: 2000px) {
+  div.card__profileInfoMobile {
+    display: none;
+  }
+}
+div .panel__profileContent {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  padding-right: 2rem;
+  padding-top: 8rem;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  div .panel__profileContent {
+    padding-top: 0;
+  }
+}
+div.card__profileContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 24rem;
+  width: calc(100vw - 4rem);
+  background-color: #CA4A65;
+  background-size: auto;
+  border-radius: 8px;
+  margin-left: 2rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+  color: #fafafa;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  div.card__profileContent {
+    height: 15rem;
+    width: calc(100vw - 4rem);
+    margin-top: 6rem;
+    display: none;
+  }
+}
+div.card__profileContent__record {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 92%;
+  width: 100%;
+  margin: 1rem;
+  border-radius: 8px;
+  color: black;
+  background-color: #fafafa;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  div.card__profileContent__record {
+    display: none;
+  }
+}
+div .card__profileMobile__number {
+  color: #CA4A65;
+  margin-bottom: 0;
+}
+
+main.panel__profileContent {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  padding-right: 2rem;
+  padding-top: 8rem;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  main.panel__profileContent {
+    padding-top: 0;
+  }
+}
+
+section.mobile {
+  display: none;
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  section.mobile {
+    display: block;
+    width: 100%;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+section .panel__left__itemContainerMobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  list-style-type: none;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-right: 1rem;
+}
+section .panel__left__namingMobile {
+  color: black;
+}
+section .panel__left__namingIconMobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+section .panel__left__separator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
 /*# sourceMappingURL=main.css.map */
