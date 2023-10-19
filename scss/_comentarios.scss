@@ -1,34 +1,35 @@
 // *{
 //     border: 1px black solid;
 // }
-div{
-    .comments__userPhoto{
-        @include tamaño(20%,12%);
-        padding: 1rem;
+div {
+  .comments__userPhoto {
+    @include tamaño(20%, 12%);
+    padding: 1rem;
+  }
+  &.comments {
+    @include flexBox(flex, row, start, none);
+    @include tamaño(fit-content, 100%);
+    padding: 0%;
+  }
+  &.comments__container {
+    padding: 0;
+    margin-left: 0%;
+    width: 100%;
+    margin-right: -100%;
+    @include tamaño(100%, 40%);
+    @media (min-width: 0px) and (max-width: 1200px) {
+      display: none;
     }
-    &.comments{
-        @include flexBox(flex,row ,start ,none);
-        @include tamaño(fit-content,100%);
-        padding: 0%;
+    @include flexBox(flex, column, start, center);
+  }
+  .comments__textArea {
+    @include tamaño(20%, 100%);
+    @include flexBox(flex, column, center, center);
+    padding: 1rem;
+  }
+  p {
+    &.comments__review {
+      font-size: 1em;
     }
-    &.comments__container{
-        padding: 0;
-        margin-left: 0%;
-        width: 100%;
-        margin-right: -100%;
-        @include tamaño(100%,40%);
-        @media (min-width:0px) and (max-width:1200px) {
-                display: none;
-            }
-        @include flexBox(flex,column ,start ,center);    
-    } 
-    .comments__textArea{
-        @include tamaño(20%,100%);
-        @include flexBox(flex,column ,center ,center);
-    }
-    p{
-        &.comments__review{
-            font-size: 1em;
-        }
-    } 
+  }
 }

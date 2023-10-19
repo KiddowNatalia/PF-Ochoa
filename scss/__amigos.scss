@@ -1,21 +1,36 @@
+.friendsTab {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
 .friends__container {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 100vh;
 }
 .friends__list__container {
-  width: 20%;
+  width: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff4e2;
-  height: 100%;
+  height: 100vh;
+  position: fixed;
   border: 1px solid #ca4a6554;
+  margin-top: 3.5rem;
   h2 {
     font-size: 1.2rem;
+    color: #009300;
+    font-weight: bold;
+  }
+  .offline {
+    h2 {
+      color: black;
+    }
   }
 }
 .list__title__container {
@@ -26,11 +41,9 @@
 }
 .list__friends__online {
   width: 100%;
-  height: 100%;
 }
 .list__friends__offline {
   width: 100%;
-  height: 100%;
   .friend__image {
     width: 30%;
     img {
@@ -53,12 +66,12 @@
 .friend__name {
   display: flex;
   align-items: center;
-  p {
+  padding-right: 1rem p {
     margin: 0;
   }
 }
 .friends__posts__container {
-  width: 75%;
+  width: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
   display: flex;
@@ -66,26 +79,156 @@
   align-items: center;
   background-color: #fff4e2;
   height: 100%;
+  margin-left: 12%;
+  margin-right: 2%;
+  margin-top: 6rem;
   -webkit-box-shadow: 0px 1px 38px -15px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 1px 38px -15px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 1px 38px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 20px 0px rgb(0 0 0 / 31%);
 }
 .friend__post__container {
   width: 100%;
-  height: 30%;
+  height: auto;
   display: flex;
   flex-direction: row;
-  background-color: white;
+  padding-right: 4%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .friend__image__container {
-  width: 12%;
+  width: 6%;
+  display: flex;
+  align-items: center;
   img {
     width: 100%;
   }
 }
 .post__container {
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 2rem;
+  background-color: white;
+  position: relative;
+  border-radius: 0.4em;
+  margin-left: 1.2rem;
+}
+.post__content {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  iframe {
+    height: 100%;
+  }
+  .post__container {
+    height: 36rem;
+  }
+  img {
+    height: 100%;
+  }
+}
+.poster__container {
+  height: 30rem;
+}
+
+.post__container:after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 31px solid transparent;
+  border-right-color: white;
+  border-left: 0;
+  margin-top: -31px;
+  margin-left: -31px;
+}
+.textbox__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.post__textArea {
+  height: 120px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.button__container {
+  width: 10rem;
+}
+.enviar {
+  height: 3rem;
+  width: 100%;
+  padding-top: 2re;
+  margin-top: 1rem;
+  background-color: #ff7592;
+  border-radius: 10px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .friendsTab {
+    position: unset;
+    z-index: 0;
+  }
+  .friends__container {
+    flex-direction: row;
+  }
+  .friends__list__container {
+    width: 100%;
+    height: 100%;
+    position: unset;
+    margin-top: 0px;
+    padding-bottom: 1.5rem;
+  }
+  .friends__posts__container {
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    -webkit-box-shadow: unset;
+    -moz-box-shadow: unset;
+    box-shadow: unset;
+  }
+  .friend__post__container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-right: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  .post__container {
+    padding: 0.5rem;
+    border-radius: 0.4em;
+    margin-left: 0;
+    margin: 1rem;
+    .post__text {
+      padding: 1rem;
+    }
+  }
+  .friend__image__container {
+    width: 20%;
+  }
+  .post__container:after {
+    content: "";
+    transform: rotate(339deg);
+    left: 53%;
+    top: 12px;
+  }
+  .post__textArea {
+    width: 80%;
+  }
 }
